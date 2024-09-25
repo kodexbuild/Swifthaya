@@ -1,0 +1,204 @@
+@import "./variable";
+@import "./mixin";
+
+* {
+  @include box;
+  // @include border;
+}
+body {
+  width: 100%;
+  position: relative;
+}
+.header {
+  @include header;
+}
+.container {
+  height: 600px;
+  display: flex;
+  width: 100%;
+
+  .heroimg {
+    width: 40%;
+    background: url(../assets/teacher.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .form {
+    padding: 20px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+
+    form {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .caption {
+        width: 100%;
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-weight: 600;
+          font-size: 1rem;
+          span {
+            color: lighten($green, 5);
+          }
+        }
+        * {
+          text-align: center;
+        }
+      }
+      .inputs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        row-gap: 20px;
+        label {
+          margin-left: 15px;
+        }
+
+        .input {
+          width: 100%;
+          overflow: hidden;
+          border: 1px solid grey;
+          box-shadow: 2px 2px 2px grey;
+          display: flex;
+          align-items: center;
+          border-radius: 3px;
+          input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 15px;
+            text-indent: 2px;
+          }
+        }
+      }
+
+      .forgotpass {
+        width: 100%;
+        color: $green;
+        text-align: end;
+        text-decoration: none;
+      }
+      .loginbtn {
+        width: 100%;
+        padding: 15px;
+        margin: 10px auto;
+        font-weight: 600;
+        border-radius: 7px;
+        color: white;
+        text-align: center;
+        border: none;
+        background-color: darken($green, 4);
+      }
+      .login {
+        font-size: small;
+        font-weight: 600;
+        padding: 3px;
+        a {
+          margin-left: 2px;
+          text-decoration: none;
+          color: lighten($green, 5);
+        }
+      }
+      .alternative {
+        display: flex;
+        padding-block: 3px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        p {
+          text-align: center;
+          font-size: small;
+          width: 100%;
+          position: relative;
+          &::before {
+            content: "";
+            top: 50%;
+            width: 239px;
+            height: 1px;
+            position: absolute;
+            background-color: grey;
+            right: 0;
+          }
+          &::after {
+            content: "";
+            top: 50%;
+            left: 0;
+            width: 239px;
+            height: 1px;
+            position: absolute;
+            background-color: grey;
+          }
+          .yellow {
+            display: inline-block;
+            background-color: #f1d326;
+            color: black;
+            font-size: small;
+            font-weight: 600;
+            padding: 3px;
+            border-radius: 5px;
+          }
+        }
+      }
+      .socials {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+footer {
+  @include footer(100%, black);
+}
+
+// ipad view
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+// mobile view
+@media (max-width: 768px) {
+  .header {
+    @include header-mobile;
+    background-color: white;
+  }
+  .container {
+    margin-top: 43px;
+    .heroimg {
+      display: none;
+    }
+    .form {
+      padding: 10px;
+      padding-top: 50px;
+      width: 100%;
+      form {
+        background-color: white;
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+
+        .alternative {
+          p {
+            &::before,
+            &::after {
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @include footer-mobile;
+  }
+}

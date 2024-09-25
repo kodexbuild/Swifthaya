@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  border-bottom: 1px solid grey;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+}
+.header * {
+  box-sizing: content-box;
+}
+.header .navbox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbox .left {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 200px;
+  width: 70%;
+}
+.header .navbox .left .closer {
+  display: none;
+}
+.header .navbox .left .selectone,
+.header .navbox .left .selecttwo {
+  display: flex;
+  font-weight: 700;
+}
+.header .navbox .left .selectone select,
+.header .navbox .left .selecttwo select {
+  border: none;
+  outline: none;
+}
+.header .navbox .left .search {
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid grey;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border-color: grey;
+}
+.header .navbox .left .search label {
+  position: absolute;
+  top: 17%;
+  left: 12px;
+}
+.header .navbox .left .search input {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: none;
+  outline: none;
+  text-indent: 40px;
+}
+.header .navbox .left .auth-links {
+  margin-left: 70px;
+  display: flex;
+  gap: 3rem;
+}
+.header .navbox .left a {
+  text-decoration: none;
+  color: black;
+}
+.header .navbox .mobile-icons {
+  display: none;
+}
+.header .navbox .mobile-icons span.ri-menu-line {
+  display: none;
+}
+.header .navbox .right {
+  display: flex;
+  height: 100%;
+  width: 20%;
+  font-weight: 600;
+  align-items: center;
+  padding: 10px;
+}
+.header .navbox .right .post {
+  padding: 10px;
+  padding-inline: 36px;
+  background-color: #81be00;
+  border-radius: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 20dvh;
+}
+.body .header {
+  width: 100%;
+  padding-block: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+.body .header nav {
+  width: 100%;
+  padding-block: 20px;
+  display: flex;
+  justify-content: space-around;
+  border: none;
+}
+.body .header nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+.body .container {
+  max-width: 600px;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.body .container .box {
+  display: flex;
+  width: 100%;
+  padding-inline: 3px;
+  aspect-ratio: 1;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.body .container .box .icon {
+  width: 10dvw;
+  aspect-ratio: 1;
+}
+.body .container .box .icon img {
+  width: 100%;
+  height: 100%;
+}
+.body .container .box .notification {
+  text-align: center;
+  padding-inline: 7px;
+}
+.body .container .box .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #81be00;
+}
+.body .container .box .btn button {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2dvw;
+  background: transparent;
+  text-align: center;
+  padding: 15px;
+}
+.body .container .box .input {
+  width: 80%;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.body .container .box .input input {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #dbdada;
+  outline: none;
+}
+.body .container .box .resend {
+  display: flex;
+  text-transform: capitalize;
+  font-weight: 600;
+  gap: 0.4rem;
+  align-items: center;
+}
+.body .container .box .resend a {
+  text-decoration: none;
+  color: #81be00;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: black;
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+footer .linksection {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  color: white;
+}
+footer .linksection .linkscaption {
+  margin-bottom: 1rem;
+}
+footer .linksection .outline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .linksection .outline li {
+  font-size: small;
+}
+footer .linksection .outline li a {
+  text-decoration: none;
+  color: white;
+}
+footer .linksection .left {
+  justify-self: center;
+}
+footer .linksection .center {
+  justify-self: center;
+}
+footer .linksection .right {
+  justify-self: center;
+}
+footer .end {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+footer .end p {
+  font-size: 14px;
+}
+footer .end .icons span {
+  margin-right: 3px;
+  margin-left: 3px;
+}/*# sourceMappingURL=verification.css.map */

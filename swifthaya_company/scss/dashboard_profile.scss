@@ -1,0 +1,220 @@
+@import "./variable";
+@import "./mixin";
+* {
+  @include box;
+
+  //   @include border;
+}
+
+.box {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  h1 {
+    font-size: 1.7dvw;
+  }
+  header {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+
+    .btn {
+      padding: 10px;
+      padding-inline: 20px;
+      color: $green;
+      border: 1px solid $green;
+      border-radius: 30px;
+    }
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    header {
+      h2 {
+        color: $green;
+      }
+    }
+
+    .infobox {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .info {
+        width: calc(100% / 3.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        text-transform: capitalize;
+        gap: 1rem;
+        box-shadow: $box-shadow;
+        padding-block: 20px;
+
+        h1 {
+          font-size: 1.7dvw;
+        }
+        h2 {
+          font-size: 1.7dvw;
+        }
+        * {
+          padding: 10px;
+        }
+      }
+    }
+    .notifications {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .notification {
+        width: calc(100% / 2.1);
+
+        header {
+          width: 100%;
+          padding: 10px;
+          button {
+            color: $green;
+            font-weight: 600;
+            background: transparent;
+            text-transform: capitalize;
+            border: none;
+            font-size: 1.3dvw;
+            padding: 10px;
+            padding-inline: 20px;
+            outline: none;
+          }
+        }
+        .wallet {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          background: $green;
+          color: white;
+          padding: 20px;
+          padding-block: 40px;
+          border-radius: 10px;
+
+          h1,
+          h2 {
+            font-size: 1dvw;
+            width: 100%;
+            text-transform: capitalize;
+            padding: 6px;
+          }
+          button {
+            background: white;
+            color: black;
+            border: none;
+            outline: none;
+            max-width: 50%;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 1.1dvw;
+            padding-inline: 10px;
+            font-weight: 600;
+          }
+        }
+        .messages {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          border: 1px solid #d1cece;
+          padding: 20px;
+          padding-block: 30px;
+          border-radius: 10px;
+
+          .body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .left {
+                width: 80%;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                .img {
+                  width: 5dvw;
+                  aspect-ratio: 1;
+                  border-radius: 100%;
+                  background: black;
+                }
+                .txt {
+                  font-weight: 600;
+                  text-transform: capitalize;
+                  h3 {
+                    font-size: 1.2dvw;
+                  }
+                  p {
+                    font-size: 1.1dvw;
+                  }
+                }
+              }
+              .right {
+                width: 10%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .projectposts {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .body {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .row {
+          padding: 10px;
+          box-shadow: $box-shadow;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .left {
+            width: 70%;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 1.4dvw;
+            p {
+              opacity: 0.6;
+            }
+          }
+          .right {
+            width: 30%;
+            button {
+              background: $green;
+              padding: 10px;
+              border: none;
+              border-radius: 4px;
+              text-transform: capitalize;
+              font-size: 1.2dvw;
+              outline: none;
+              font-weight: 600;
+              color: white;
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

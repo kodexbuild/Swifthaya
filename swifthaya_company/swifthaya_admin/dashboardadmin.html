@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admindashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/dashboard.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="left"><h1>LOGO</h1></div>
+      <div class="center">
+        <div class="search">
+          <label for="">
+            <i class="ri-search-2-line"></i>
+          </label>
+          <input type="text" placeholder="find Talents" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="icons">
+          <span><i class="ri-notification-3-line"></i></span>
+          <span><i class="ri-account-circle-fill"></i></span>
+        </div>
+
+        <div class="select">
+          <label for="user">Bandalton</label>
+          <select id="find-jobs" name="find-jobs">
+            <option value="" disabled selected>peter okoye</option>
+            <!-- <option value="designer">Designer</option> 
+                        <option value="manager">Manager</option> -->
+          </select>
+        </div>
+      </div>
+    </header>
+    <section class="body">
+      <nav class="sidebar">
+        <ul>
+          <li class="active li">
+            <i class="ri-dashboard-horizontal-line"></i
+            ><a href="" class="link" data-file="dashboardprofile.html"
+              >Dashboard</a
+            >
+          </li>
+          <li class="li">
+            <i class="ri-search-line"></i
+            ><a href="" class="link">Role management</a>
+          </li>
+          <li class="li">
+            <i class="ri-file-add-line"></i
+            ><a href="" class="link">Application management</a>
+          </li>
+          <li class="li">
+            <i class="ri-sticky-note-line"></i
+            ><a href="" class="link"> Communication</a>
+          </li>
+          <li class="li">
+            <i class="ri-chat-4-line"></i
+            ><a href="" class="link"> Analytics and Report</a>
+          </li>
+          <li class="li">
+            <i class="ri-wallet-line"></i
+            ><a href="" class="link">Marketing tool</a>
+          </li>
+          <li class="li">
+            <i class="ri-star-line"></i
+            ><a href="" data-file="dashboardadmin.html" class="link"
+              >Feedback</a
+            >
+          </li>
+          <li class="li">
+            <i class="ri-settings-2-line"></i
+            ><a href="" class="link">integration</a>
+          </li>
+          <li class="li">
+            <i class="ri-logout-box-line"></i><a href="" class="link">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="activepage" id="content"></div>
+    </section>
+    <div class="dashboardfooter">
+      <footer>
+        <div class="linksection">
+          <div class="left">
+            <h3 class="linkscaption">Company</h3>
+            <ul class="outline">
+              <li><a href="">About us</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="center">
+            <h3 class="linkscaption">Support</h3>
+            <ul class="outline">
+              <li><a href="">Guide</a></li>
+              <li><a href="">Help Center</a></li>
+              <li><a href="">How it Works </a></li>
+              <li><a href="">FaQs</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="right">
+            <h3 class="linkscaption">Community</h3>
+            <ul class="outline">
+              <li><a href="">Blog</a></li>
+              <li><a href="">Press & News</a></li>
+              <li><a href="">Helpful Tips</a></li>
+              <li><a href="">Customer Reviews</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="end">
+          <p>
+            <i class="ri-copyright-line"></i>2024 SWIFTHAYA inc.All rights
+            reserved
+          </p>
+          <aside class="icons">
+            <span><i class="ri-twitter-x-line"></i></span>
+            <span><i class="ri-facebook-circle-line"></i></span>
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-youtube-line"></i></span>
+            <span><i class="ri-linkedin-box-line"></i></span>
+          </aside>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+}
+.box .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-inline: 10px;
+  font-weight: 600;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.box .top .left {
+  width: 40%;
+}
+.box .top .left .search {
+  width: 100%;
+}
+.box .top .left .search input {
+  padding-block: 30px;
+  border: none;
+  color: #dad4d4;
+  width: 80%;
+  text-indent: 20px;
+}
+.box .top .right {
+  width: 60%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.box .top .right .select select {
+  color: #908e8e;
+  padding: 6px;
+  border: 1px solid #afabab;
+  border-radius: 10px;
+}
+.box .top .right .btn {
+  padding: 10px;
+  padding-inline: 1dvw;
+  background: #81be00;
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.box .applications {
+  display: flex;
+  flex-direction: column;
+}
+.box .applications .body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 20px;
+}
+.box .applications .body .application {
+  width: 97%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.box .applications .body .application .top {
+  padding-top: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.box .applications .body .application .top .left {
+  width: 67%;
+  height: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.box .applications .body .application .top .left .img {
+  width: 12dvw;
+  aspect-ratio: 1;
+  background-image: url(../assets/Rectangle\ 81.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.box .applications .body .application .top .left .text {
+  width: 50%;
+}
+.box .applications .body .application .top .left .text h4 {
+  font-weight: 700;
+}
+.box .applications .body .application .top .left .text p {
+  font-weight: 600;
+}
+.box .applications .body .application .top .left .text span {
+  font-weight: 700;
+  opacity: 0.4;
+}
+.box .applications .body .application .top .right {
+  display: flex;
+  height: 100%;
+  justify-content: end;
+  gap: 1rem;
+  max-width: 30%;
+}
+.box .applications .body .application .top .right .span {
+  display: flex;
+  padding-inline: 0.3rem;
+  font-size: 2.5dvw;
+  font-weight: 500;
+}
+.box .applications .body .application .footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.box .applications .body .application .footer .text {
+  width: 30%;
+  text-align: left;
+}
+.box .applications .body .application .footer .text p {
+  font-weight: 600;
+}
+.box .applications .body .application .footer .text p:last-child {
+  opacity: 0.6;
+}
+.box .applications .body .application .footer .btn {
+  width: 20%;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  border: none;
+  outline: none;
+  background: #81be00;
+}/*# sourceMappingURL=find_talents.css.map */

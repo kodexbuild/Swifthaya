@@ -1,0 +1,413 @@
+@import "./variable";
+
+@mixin box {
+  font-family: $main-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin border {
+  border: 2px solid;
+}
+@mixin header {
+  border-bottom: 1px solid grey;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+
+  * {
+    box-sizing: content-box;
+  }
+
+  .navbox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-left: 200px;
+      // justify-content: space-between;
+      width: 70%;
+      //   .closer
+      .closer {
+        display: none;
+      }
+
+      .selectone,
+      .selecttwo {
+        display: flex;
+        font-weight: 700;
+        select {
+          border: none;
+          outline: none;
+        }
+      }
+      .search {
+        width: max-content;
+        border: 1px solid grey;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        border-color: grey;
+        label {
+          position: absolute;
+          top: 17%;
+          left: 12px;
+        }
+        input {
+          width: 90%;
+          height: 100%;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          border: none;
+          outline: none;
+          text-indent: 40px;
+        }
+      }
+      .auth-links {
+        margin-left: 70px;
+        display: flex;
+        gap: 3rem;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    // left ends here
+    .mobile-icons {
+      display: none;
+      span.ri-menu-line {
+        display: none;
+      }
+    }
+    // mobile icons ends here
+    .right {
+      display: flex;
+      height: 100%;
+      // justify-content: center;
+      width: 20%;
+      font-weight: 600;
+      align-items: center;
+      padding: 10px;
+
+      .post {
+        padding: 10px;
+        padding-inline: 36px;
+        background-color: $green;
+        border-radius: 24px;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+@mixin header-two {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  padding-inline: 100px;
+  border-bottom: 1px solid grey;
+
+  .center {
+    .search {
+      input {
+        padding: 10px;
+        text-indent: 10px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    .select {
+      display: flex;
+      flex-direction: column;
+      select {
+        color: grey;
+        border: none;
+      }
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 8px;
+      span:first-child {
+        font-size: 1.3rem;
+      }
+      span:last-child {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+//  mobile
+//
+@mixin header-mobile {
+  border-bottom: 1px solid grey;
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+
+  * {
+    box-sizing: content-box;
+  }
+
+  .navbox {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 2px;
+    padding: 10px;
+    z-index: 4;
+    // hidden div on mobile like sidebar
+    .left {
+      text-transform: capitalize;
+      border: 2px solid black;
+      padding-top: 0;
+      padding-left: 0;
+      width: 100vw;
+      display: none;
+      background-color: white;
+      z-index: 2;
+      flex-direction: column;
+      position: fixed;
+      inset: 0;
+      gap: 2rem;
+      width: 100%;
+      //
+      .closer {
+        display: block;
+        font-size: 2rem;
+        width: 80%;
+        text-align: end;
+        font-weight: 300;
+        margin-top: 60px;
+        padding: 3px;
+        // border: 2px solid black;
+      }
+      .selectone,
+      .selecttwo {
+        display: flex;
+        font-weight: 700;
+        select {
+          border: none;
+          outline: none;
+        }
+      }
+      .search {
+        width: max-content;
+        border: 1px solid grey;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-color: grey;
+        label {
+          position: absolute;
+          top: 17%;
+          left: 12px;
+        }
+        input {
+          width: 90%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          height: 100%;
+          border: none;
+          outline: none;
+
+          text-indent: 40px;
+          &::placeholder {
+            align-self: center;
+          }
+        }
+      }
+      .auth-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+    .mobile-icons {
+      padding-left: 1rem;
+      display: flex;
+      gap: 2rem;
+    }
+
+    //    /left ends here
+    .right {
+      display: flex;
+      width: 50%;
+      font-weight: 600;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0;
+      padding-right: 10px;
+
+      .post {
+        padding-block: 10px;
+        padding-inline: 20px;
+        background-color: $green;
+        border-radius: 24px;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+@mixin footer($width, $background) {
+  display: flex;
+  width: $width;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: $background;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  .linksection {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    color: white;
+    .linkscaption {
+      margin-bottom: 1rem;
+    }
+    .outline {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      li {
+        font-size: small;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+    .left {
+      justify-self: center;
+    }
+    .center {
+      justify-self: center;
+    }
+    .right {
+      justify-self: center;
+    }
+  }
+
+  .end {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    p {
+      font-size: 14px;
+    }
+    .icons {
+      span {
+        margin-right: 3px;
+        margin-left: 3px;
+      }
+    }
+  }
+}
+//  mobile
+@mixin footer-mobile {
+  padding-top: 10px;
+  background: $green;
+
+  .linksection {
+    display: flex;
+    padding-inline: 20px;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 2px solid white;
+    padding-block: 3rem;
+
+    .linkscaption {
+      margin-bottom: 1rem;
+    }
+    .outline {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      li {
+        font-size: small;
+        a {
+          text-decoration: none;
+          color: #bceba0;
+        }
+      }
+    }
+    .left {
+      justify-self: center;
+    }
+    .center {
+      justify-self: center;
+    }
+    .right {
+      justify-self: center;
+    }
+  }
+
+  .end {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 15px;
+    padding-bottom: 30px;
+    p {
+      font-size: 14px;
+      padding: 10px;
+      text-align: center;
+    }
+    .icons {
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      span {
+        margin-right: 3px;
+        margin-left: 3px;
+      }
+    }
+  }
+}

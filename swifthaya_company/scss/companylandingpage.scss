@@ -1,0 +1,163 @@
+@import './variable';
+@import './mixin';
+
+*{
+    @include box;
+    // @include border;
+}
+body{
+    width: 100%;
+}
+.header{
+    @include header
+}
+
+.pagebody{
+display: flex;
+width: 100%;
+min-height: 600px;
+.green{
+    background: $green;
+    padding: 22%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+   width: 37%;
+    height: 100%;
+}
+.welcome-box{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+
+    .welcomediv{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    width: 80%;
+   margin-top: 30px;
+   .welcomecaption{
+
+    h1{
+        text-transform: capitalize;
+    text-align: center;
+    width: 100%;
+    font-size: 2.5rem;
+     span{
+        color: lighten($green,5);
+     }
+    }
+ p{
+    text-align: center;
+
+ }
+   }
+
+   .imgcontainer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   .content{
+    width: 44%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .imgbox{
+        width: 60%;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        overflow: hidden;
+        
+        .img{
+            width: 100%;
+            height: 100%;
+                background-repeat: no-repeat;} 
+            }
+       
+     
+       .textbox{
+       
+    
+        h4{
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+            text-transform: capitalize;
+            color: darken($green,17);
+        }
+        p{
+            padding: 10px;
+            max-width: 100%;
+            text-align: center;
+            font-size: 13px;
+        }
+       }
+   }
+
+   }
+   .link{
+   width: 100%;
+   text-align: center;
+   font-weight: 600;
+   a{
+    text-decoration: none;
+    color: $green;
+   }
+}
+}
+}
+} 
+footer{
+    @include footer(100%,black);
+}  
+ 
+
+// mobile view
+@media (max-width: 768px){
+    body{
+        background: white;
+    }
+    .header{
+        @include header-mobile;
+  background-color: white;     
+    }
+    .pagebody{
+        margin-top: 43px;
+    
+.green{
+  display: none;
+}
+.welcome-box{
+    width: 100%;
+    .welcomediv{
+        width: 100%;
+        .welcomecaption{
+            width: 100%;
+            h1{
+                font-size: 2rem;
+               
+            }
+            p{
+                display: none;
+            }
+        }
+        .imgcontainer{
+            flex-direction: column;
+            .content{
+                width: 100%;
+            }
+        }
+        .link{
+            padding-bottom: 30px;
+        }
+    }
+}
+
+    }
+    
+    footer{
+        @include footer-mobile
+    }
+}

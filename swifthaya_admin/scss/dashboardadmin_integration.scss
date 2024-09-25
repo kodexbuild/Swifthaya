@@ -1,0 +1,127 @@
+@import "./variable";
+@import "./mixin";
+* {
+  @include box;
+
+  //   @include border;
+}
+.box {
+  width: 100%;
+  padding-right: 200px;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .topheader {
+    .text {
+      h1 {
+        text-transform: capitalize;
+        padding: 10px;
+      }
+      p {
+        padding: 8px;
+      }
+    }
+    .input_box {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-inline: 10px;
+      padding-block: 10px;
+      .input {
+        border: 1px solid grey;
+        border-radius: 10px;
+        width: 40%;
+        padding-inline: 10px;
+        input {
+          border: none;
+          outline: none;
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        width: 40%;
+        .btn {
+          padding-block: 6px;
+          padding-inline: 3dvw;
+          display: flex;
+          border-radius: 5px;
+          align-items: center;
+          outline: none;
+          border: none;
+          background-color: $green;
+          color: white;
+        }
+      }
+    }
+  }
+  .body {
+    header {
+      text-transform: capitalize;
+      font-size: 2dvw;
+      font-weight: 700;
+      padding-inline: 20px;
+    }
+    .gridbox {
+      display: grid;
+      padding: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 60px;
+    }
+    .grid {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-inline: 25px;
+      box-shadow: $box-shadow;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .left {
+          svg {
+            width: 5dvw;
+            aspect-ratio: 1;
+          }
+        }
+        p {
+          font-weight: 600;
+          text-align: left;
+        }
+        .right {
+          .state {
+            padding: 4px;
+            border: 1px solid;
+            color: $green;
+            background-color: transparent;
+            padding-inline: 3dvw;
+            border-radius: 10px;
+          }
+        }
+      }
+      .bottom {
+        .links {
+          display: flex;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+            padding: 4px;
+            padding-inline: 25px;
+            color: white;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            border-radius: 10px;
+            background-color: $green;
+            &:nth-child(2) {
+              border: 1px solid;
+              color: $green;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import "./variable";
+@import "./mixin";
+
+* {
+  @include box;
+  //   @include border;
+}
+
+.caption {
+  width: 100%;
+  padding: 20px;
+  h1 {
+    text-transform: capitalize;
+    font-size: 2.5dvw;
+  }
+}
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  gap: 25px;
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    .searchbox {
+      width: 90%;
+      .search {
+        height: 100%;
+        width: 30%;
+        padding: 10px;
+        border: 1px solid grey;
+        input {
+          height: 100%;
+          width: 90%;
+          padding: 4px;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+  }
+  .select {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    width: 30%;
+    span {
+      font-size: 1dvw;
+      padding: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    }
+  }
+}
+.table {
+  width: 98dvw;
+
+  table {
+    border-collapse: collapse;
+    col {
+      width: 20%;
+    }
+    thead {
+      tr {
+        background-color: #c0df80;
+        th {
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 20px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        th {
+          padding: 20px;
+        }
+        td {
+          text-align: center;
+          padding: 15px;
+        }
+      }
+    }
+  }
+}

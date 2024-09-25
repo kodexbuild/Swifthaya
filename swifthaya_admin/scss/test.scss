@@ -1,0 +1,14 @@
+@import "./variable";
+@import "./mixin";
+
+* {
+  @include box;
+  color: #b7d871;
+  // @include border;
+  // Function to calculate the lightness based on the nth value
+}
+#columnchart_material {
+  width: 90%;
+  height: 500px;
+  box-shadow: $box-shadow;
+}

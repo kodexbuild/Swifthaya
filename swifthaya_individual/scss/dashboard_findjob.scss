@@ -1,0 +1,235 @@
+@import "./variable";
+@import "./mixin";
+* {
+  @include box;
+
+  //   @include border;
+}
+
+.box {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  header {
+    text-transform: capitalize;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      opacity: 0.7;
+    }
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    header {
+      display: flex;
+      flex-direction: row;
+      border: 1px solid grey;
+      text-transform: capitalize;
+      padding: 10px;
+      padding-block: 28px;
+      .input {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        input {
+          padding: 10px;
+          border: none;
+          outline: none;
+          height: 100%;
+          width: 60%;
+          &::placeholder {
+            font-size: 1dvw;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .selectbox {
+        display: flex;
+        gap: 1rem;
+        .select {
+          padding-block: 4px;
+          padding: 10px;
+          border: 1px solid grey;
+          border-radius: 8px;
+        }
+        .filter {
+          background: $green;
+          color: white;
+          border: none;
+          padding-inline: 15px;
+        }
+      }
+    }
+
+    .grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      width: 100%;
+      .left {
+        display: flex;
+        width: 50%;
+
+        .container {
+          width: 100%;
+          display: flex;
+          padding: 7px;
+          flex-direction: column;
+          border-bottom: 2px solid grey;
+          .top {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 3px dotted grey;
+            span {
+              font-size: 2dvw;
+            }
+            .content {
+              display: flex;
+              align-items: center;
+              .img {
+                background: url(https://s3-alpha-sig.figma.com/img/5f11/f35d/73fbdcd3a8ab7fdaed7102cf39cbe3e2?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ll-XcBBUN~SQxBN4qcqWvZEhqao0XZoWfmjdr0nqFXUc5XWZ-VPZarYmJXPW7yZNc5OVWirjpeShXsKfCPIMgTbSikvJT8MfidAUJvlxItJZlbOkTJ7Z4dw1MB7tKrXA~ZlbYDHtAihauBGOLpOjGchbvDXAQbplbnodTpM~hfD1-Ly8kA187mcCVo5cgeRKWyV-sYMd2wgT-bHcEZiE2-Tn58TEnknObLJFJnnbAcdTv929oTMOLhZC7zyuroRXlV9Xa1Psnke-GTll2GFDCuj9rw58AP~O5WSuQN-lDoztZTyp6N1A~ujovS3UKxcxSIzcHEvH6ZOBuFk8gvHTfw__);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 4dvw;
+                aspect-ratio: 1;
+                border-radius: 100%;
+              }
+              .text {
+                text-transform: capitalize;
+                font-weight: 600;
+                display: flex;
+                flex-direction: column;
+                line-height: 4dvh;
+                padding: 12px;
+                p {
+                  &:last-child {
+                    opacity: 0.4;
+                  }
+                }
+              }
+            }
+          }
+          .bottom {
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            text-transform: capitalize;
+            font-weight: 600;
+            p {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              span {
+                padding: 6px;
+                aspect-ratio: 1;
+                background: $green;
+                color: white;
+                border-radius: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        border: none;
+        outline: none;
+        width: 45%;
+        flex-direction: column;
+        .top {
+          background: $green;
+          display: flex;
+          flex-direction: column;
+          header {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            h1 {
+              color: white;
+              padding: 7px;
+              text-align: center;
+              text-transform: uppercase;
+            }
+            .mid {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              .img {
+                background: url(https://s3-alpha-sig.figma.com/img/5f11/f35d/73fbdcd3a8ab7fdaed7102cf39cbe3e2?Expires=1726444800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ll-XcBBUN~SQxBN4qcqWvZEhqao0XZoWfmjdr0nqFXUc5XWZ-VPZarYmJXPW7yZNc5OVWirjpeShXsKfCPIMgTbSikvJT8MfidAUJvlxItJZlbOkTJ7Z4dw1MB7tKrXA~ZlbYDHtAihauBGOLpOjGchbvDXAQbplbnodTpM~hfD1-Ly8kA187mcCVo5cgeRKWyV-sYMd2wgT-bHcEZiE2-Tn58TEnknObLJFJnnbAcdTv929oTMOLhZC7zyuroRXlV9Xa1Psnke-GTll2GFDCuj9rw58AP~O5WSuQN-lDoztZTyp6N1A~ujovS3UKxcxSIzcHEvH6ZOBuFk8gvHTfw__);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 4dvw;
+                aspect-ratio: 1;
+                border-radius: 100%;
+              }
+              .text {
+                text-transform: capitalize;
+                font-weight: 600;
+                display: flex;
+                color: white;
+                flex-direction: column;
+                line-height: 4dvh;
+                padding: 12px;
+                p {
+                  opacity: 0.4;
+                }
+              }
+            }
+            .bottom {
+              display: flex;
+              width: 100%;
+              justify-content: space-between;
+              color: white;
+              .item {
+                width: calc(100% / 3);
+                display: flex;
+                flex-direction: column;
+                span {
+                  i {
+                    font-size: 2dvw;
+                  }
+                }
+                P {
+                  text-transform: capitalize;
+                  &:last-child {
+                    font-weight: 600;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+
+          .btn {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            button {
+              padding-block: 10px;
+              width: 100%;
+              color: white;
+              text-transform: capitalize;
+              border: none;
+              font-size: 1.3dvw;
+              font-weight: 600;
+              outline: none;
+              background: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+}

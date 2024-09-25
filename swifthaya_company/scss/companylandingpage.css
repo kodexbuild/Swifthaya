@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.header {
+  border-bottom: 1px solid grey;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+}
+.header * {
+  box-sizing: content-box;
+}
+.header .navbox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbox .left {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 200px;
+  width: 70%;
+}
+.header .navbox .left .closer {
+  display: none;
+}
+.header .navbox .left .selectone,
+.header .navbox .left .selecttwo {
+  display: flex;
+  font-weight: 700;
+}
+.header .navbox .left .selectone select,
+.header .navbox .left .selecttwo select {
+  border: none;
+  outline: none;
+}
+.header .navbox .left .search {
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid grey;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border-color: grey;
+}
+.header .navbox .left .search label {
+  position: absolute;
+  top: 17%;
+  left: 12px;
+}
+.header .navbox .left .search input {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: none;
+  outline: none;
+  text-indent: 40px;
+}
+.header .navbox .left .auth-links {
+  margin-left: 70px;
+  display: flex;
+  gap: 3rem;
+}
+.header .navbox .left a {
+  text-decoration: none;
+  color: black;
+}
+.header .navbox .mobile-icons {
+  display: none;
+}
+.header .navbox .mobile-icons span.ri-menu-line {
+  display: none;
+}
+.header .navbox .right {
+  display: flex;
+  height: 100%;
+  width: 20%;
+  font-weight: 600;
+  align-items: center;
+  padding: 10px;
+}
+.header .navbox .right .post {
+  padding: 10px;
+  padding-inline: 36px;
+  background-color: #81be00;
+  border-radius: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.pagebody {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+}
+.pagebody .green {
+  background: #81be00;
+  padding: 22%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 37%;
+  height: 100%;
+}
+.pagebody .welcome-box {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.pagebody .welcome-box .welcomediv {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 80%;
+  margin-top: 30px;
+}
+.pagebody .welcome-box .welcomediv .welcomecaption h1 {
+  text-transform: capitalize;
+  text-align: center;
+  width: 100%;
+  font-size: 2.5rem;
+}
+.pagebody .welcome-box .welcomediv .welcomecaption h1 span {
+  color: #92d800;
+}
+.pagebody .welcome-box .welcomediv .welcomecaption p {
+  text-align: center;
+}
+.pagebody .welcome-box .welcomediv .imgcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.pagebody .welcome-box .welcomediv .imgcontainer .content {
+  width: 44%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagebody .welcome-box .welcomediv .imgcontainer .content .imgbox {
+  width: 60%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.pagebody .welcome-box .welcomediv .imgcontainer .content .imgbox .img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.pagebody .welcome-box .welcomediv .imgcontainer .content .textbox h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #466700;
+}
+.pagebody .welcome-box .welcomediv .imgcontainer .content .textbox p {
+  padding: 10px;
+  max-width: 100%;
+  text-align: center;
+  font-size: 13px;
+}
+.pagebody .welcome-box .welcomediv .link {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+.pagebody .welcome-box .welcomediv .link a {
+  text-decoration: none;
+  color: #81be00;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: black;
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+footer .linksection {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  color: white;
+}
+footer .linksection .linkscaption {
+  margin-bottom: 1rem;
+}
+footer .linksection .outline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .linksection .outline li {
+  font-size: small;
+}
+footer .linksection .outline li a {
+  text-decoration: none;
+  color: white;
+}
+footer .linksection .left {
+  justify-self: center;
+}
+footer .linksection .center {
+  justify-self: center;
+}
+footer .linksection .right {
+  justify-self: center;
+}
+footer .end {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+footer .end p {
+  font-size: 14px;
+}
+footer .end .icons span {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: white;
+  }
+  .header {
+    border-bottom: 1px solid grey;
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background-color: white;
+  }
+  .header * {
+    box-sizing: content-box;
+  }
+  .header .navbox {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 2px;
+    padding: 10px;
+    z-index: 4;
+  }
+  .header .navbox .left {
+    text-transform: capitalize;
+    border: 2px solid black;
+    padding-top: 0;
+    padding-left: 0;
+    width: 100vw;
+    display: none;
+    background-color: white;
+    z-index: 2;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    gap: 2rem;
+    width: 100%;
+  }
+  .header .navbox .left .closer {
+    display: block;
+    font-size: 2rem;
+    width: 80%;
+    text-align: end;
+    font-weight: 300;
+    margin-top: 60px;
+    padding: 3px;
+  }
+  .header .navbox .left .selectone,
+  .header .navbox .left .selecttwo {
+    display: flex;
+    font-weight: 700;
+  }
+  .header .navbox .left .selectone select,
+  .header .navbox .left .selecttwo select {
+    border: none;
+    outline: none;
+  }
+  .header .navbox .left .search {
+    width: -moz-max-content;
+    width: max-content;
+    border: 1px solid grey;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-color: grey;
+  }
+  .header .navbox .left .search label {
+    position: absolute;
+    top: 17%;
+    left: 12px;
+  }
+  .header .navbox .left .search input {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-indent: 40px;
+  }
+  .header .navbox .left .search input::-moz-placeholder {
+    align-self: center;
+  }
+  .header .navbox .left .search input::placeholder {
+    align-self: center;
+  }
+  .header .navbox .left .auth-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+  }
+  .header .navbox .left .auth-links a {
+    text-decoration: none;
+    color: black;
+  }
+  .header .navbox .mobile-icons {
+    padding-left: 1rem;
+    display: flex;
+    gap: 2rem;
+  }
+  .header .navbox .right {
+    display: flex;
+    width: 50%;
+    font-weight: 600;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    padding-right: 10px;
+  }
+  .header .navbox .right .post {
+    padding-block: 10px;
+    padding-inline: 20px;
+    background-color: #81be00;
+    border-radius: 24px;
+    color: white;
+    text-decoration: none;
+  }
+  .pagebody {
+    margin-top: 43px;
+  }
+  .pagebody .green {
+    display: none;
+  }
+  .pagebody .welcome-box {
+    width: 100%;
+  }
+  .pagebody .welcome-box .welcomediv {
+    width: 100%;
+  }
+  .pagebody .welcome-box .welcomediv .welcomecaption {
+    width: 100%;
+  }
+  .pagebody .welcome-box .welcomediv .welcomecaption h1 {
+    font-size: 2rem;
+  }
+  .pagebody .welcome-box .welcomediv .welcomecaption p {
+    display: none;
+  }
+  .pagebody .welcome-box .welcomediv .imgcontainer {
+    flex-direction: column;
+  }
+  .pagebody .welcome-box .welcomediv .imgcontainer .content {
+    width: 100%;
+  }
+  .pagebody .welcome-box .welcomediv .link {
+    padding-bottom: 30px;
+  }
+  footer {
+    padding-top: 10px;
+    background: #81be00;
+  }
+  footer .linksection {
+    display: flex;
+    padding-inline: 20px;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 2px solid white;
+    padding-block: 3rem;
+  }
+  footer .linksection .linkscaption {
+    margin-bottom: 1rem;
+  }
+  footer .linksection .outline {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  footer .linksection .outline li {
+    font-size: small;
+  }
+  footer .linksection .outline li a {
+    text-decoration: none;
+    color: #bceba0;
+  }
+  footer .linksection .left {
+    justify-self: center;
+  }
+  footer .linksection .center {
+    justify-self: center;
+  }
+  footer .linksection .right {
+    justify-self: center;
+  }
+  footer .end {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 15px;
+    padding-bottom: 30px;
+  }
+  footer .end p {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+  footer .end .icons {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+  }
+  footer .end .icons span {
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+}/*# sourceMappingURL=companylandingpage.css.map */

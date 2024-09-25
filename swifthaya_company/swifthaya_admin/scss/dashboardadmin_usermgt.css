@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  padding: 10px;
+}
+.box header {
+  padding: 10px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+.box header h1 {
+  font-size: 2.3dvw;
+}
+.box header nav {
+  display: flex;
+  color: grey;
+  width: 16%;
+  padding: 10px;
+  border: 1px solid rgb(184, 182, 182);
+  align-items: center;
+  justify-content: space-between;
+}
+.box header nav a {
+  text-decoration: none;
+  color: grey;
+  font-weight: 600;
+}
+.box header nav .active {
+  color: black;
+  position: relative;
+}
+.box header nav .active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #81be00;
+  bottom: -8px;
+  left: 0;
+}
+.box header aside {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  color: grey;
+}
+.box .body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.box .body .members {
+  display: none;
+}
+.box .body .members header {
+  display: flex;
+  align-items: center;
+}
+.box .body .members header .left {
+  display: flex;
+  gap: 2rem;
+  padding: 20px;
+}
+.box .body .members header .left button {
+  font-weight: 600;
+  padding: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+  outline: none;
+  background-color: white;
+  border: none;
+}
+.box .body .members header .left .add {
+  background: #81be00;
+  color: white;
+}
+.box .body .members header .right .filter {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-inline: 20px;
+  background: #81be00;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.box .body .members .table {
+  width: 100%;
+}
+.box .body .members .table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.box .body .members .table table thead {
+  background: #c0df80;
+}
+.box .body .members .table table thead th {
+  padding: 20px;
+}
+.box .body .members .table table tbody tr {
+  border-bottom: 1px solid grey;
+  border-inline: 1px solid grey;
+}
+.box .body .members .table table tbody tr td {
+  text-align: center;
+}
+.box .body .members .table table tbody tr td .img {
+  background: url("https://s3-alpha-sig.figma.com/img/1b16/7ef6/e36fad6a838f885f660f1aed390cf014?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=av4LgVSvZMXLORK9ZfacGa1v-m0ArMAB34kvCAEUsy8r5vtsrxVa2-1N5klHi2BwH7DqpSORAwTNBcnaeOyAt7L2Kfh-XgAEJxZQYbskAf8YKDC7eX1OAyODgKPqm0gBOJsuvSeak0FY0aQNBkWk14f-7k7FxSYTTpJVLxTDIXYuwDOgUECu7ElQm~~G2s7gnyOojJMxOKZboyBddIrPAwUG7q8Ce5~TMDUhkCzUq9AKNHPhEv6GbcZ-OMsEVyvYom7jsQaJlK7q2UWrGHJV5BMKOZs-CuytL5K8GRR9xZro5POFklT0yC-TOwke9Ml8lp3DlaAvF3BGP6RAYqtrPg__");
+  background-position: center;
+  background-size: cover;
+}
+.box .body .members .table table tbody tr td .mandy {
+  background: url(https://s3-alpha-sig.figma.com/img/6c4c/14fa/9304536d8ca1b2bee8c22a0f87e0106f?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GbSW4rZvS2Dpl0kpD~6DQqSefeQBELvmnc6Cq3~qSgNd3HLMbnXSdVdvQyRMt8X83tb6PqU1Z~NuPUKiiqhYAB0zXhs1iKbHjBZeA6CEj1R~L5X0f1wph8omiPjlcN36kcTqgxLMX5OAJbHzfklCj0Qe0pmH30~cU3K9Zn75NuelRbQfOQm-KAB06fR0S9osQpTmTviBBbuuHNfhz9X4UYL-Kz8z0XjF04s1cfIvy52ifAUig8E595V7WkfybWNiGYrREtBP7coPpn-ADLwTy~ZYfdIXFdgnHK863ieRUVqAwspyjnQQt5KgJFFwRr1rk7NhWKQ8jY4yN06m3q9UrQ__);
+  background-position: center;
+  background-size: cover;
+}
+.box .body .members .table table tbody tr td .box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.box .body .members .table table tbody tr td .box .img {
+  width: 20%;
+  background-color: red;
+  border-radius: 100%;
+  float: left;
+  aspect-ratio: 1;
+}
+.box .body .members .table table tbody tr td .active {
+  background-color: #d4e9a9;
+  padding: 6px;
+  border-radius: 40px;
+  padding-inline: 20px;
+  color: #81be00;
+}
+.box .body .members .table table tbody tr td .inactive {
+  color: #cf3535;
+  background-color: #ecb1b1;
+  padding: 6px;
+  border-radius: 40px;
+  padding-inline: 13px;
+}
+.box .body .company header {
+  display: flex;
+  align-items: center;
+}
+.box .body .company header .left {
+  display: flex;
+  gap: 2rem;
+  padding: 20px;
+}
+.box .body .company header .left button {
+  font-weight: 600;
+  padding: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+  outline: none;
+  background-color: white;
+  border: none;
+}
+.box .body .company header .left .add {
+  background: #81be00;
+  color: white;
+}
+.box .body .company header .right .filter {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-inline: 20px;
+  background: #81be00;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.box .body .company .table {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding-block: 20px;
+  padding-inline: 10px;
+}
+.box .body .company .table .head {
+  display: grid;
+  align-items: center;
+}
+.box .body .company .table .head .column {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.box .body .company .table .head .column p {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.box .body .company .table .head .column p:first-child {
+  text-align: left;
+}
+.box .body .company .table .head .column p:nth-child(3), .box .body .company .table .head .column p:nth-child(4) {
+  grid-column: span 2;
+}
+.box .body .body {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  gap: 18px 0px;
+}
+.box .body .body .row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+}
+.box .body .body .row .column {
+  text-align: center;
+}
+.box .body .body .row .column .login {
+  outline: none;
+  border: none;
+  padding: 4px;
+  padding-inline: 14px;
+  border-radius: 4px;
+  color: white;
+  background: #81be00;
+}
+.box .body .body .row .column .img {
+  background: url(https://s3-alpha-sig.figma.com/img/6c4c/14fa/9304536d8ca1b2bee8c22a0f87e0106f?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GbSW4rZvS2Dpl0kpD~6DQqSefeQBELvmnc6Cq3~qSgNd3HLMbnXSdVdvQyRMt8X83tb6PqU1Z~NuPUKiiqhYAB0zXhs1iKbHjBZeA6CEj1R~L5X0f1wph8omiPjlcN36kcTqgxLMX5OAJbHzfklCj0Qe0pmH30~cU3K9Zn75NuelRbQfOQm-KAB06fR0S9osQpTmTviBBbuuHNfhz9X4UYL-Kz8z0XjF04s1cfIvy52ifAUig8E595V7WkfybWNiGYrREtBP7coPpn-ADLwTy~ZYfdIXFdgnHK863ieRUVqAwspyjnQQt5KgJFFwRr1rk7NhWKQ8jY4yN06m3q9UrQ__);
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  aspect-ratio: 1;
+}
+.box .body .body .row .column:nth-child(3), .box .body .body .row .column:nth-child(4) {
+  grid-column: span 2;
+}
+.box .body .body .row .column:nth-child(5) button {
+  padding: 4px;
+  outline: none;
+  border: none;
+  padding-inline: 10px;
+  border-radius: 10px;
+  background: #d4e9a9;
+  color: #81be00;
+}
+.box .body .body .row .column:nth-child(5):nth-child(6) span {
+  font-size: 1rem;
+}/*# sourceMappingURL=dashboardadmin_usermgt.css.map */
