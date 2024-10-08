@@ -1,0 +1,122 @@
+@import "./variable";
+@import "./mixin";
+
+* {
+  @include box;
+  //   @include border;
+}
+body {
+  width: 100%;
+  padding: 0;
+}
+.scrolled {
+  background-color: black;
+  color: white;
+}
+.header {
+  @include header-two;
+}
+.body {
+  width: 100%;
+  // background-color: red;
+  display: flex;
+  justify-items: flex-end;
+
+  .sidebar {
+    position: fixed;
+    margin-top: 4.5rem;
+    width: 27%;
+    padding-block: 20px;
+    padding-left: 20px;
+    // background-color: blue;
+
+    .sidebar.small {
+      width: 13%;
+      background-color: blue;
+    }
+    ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+      li {
+        display: flex;
+        padding-block: 15px;
+        padding-inline: 10px;
+        position: relative;
+        align-items: center;
+        gap: 10px;
+
+        a {
+          width: 40%;
+          // display: none;
+          // background-color: red;
+          height: 100%;
+
+          text-decoration: none;
+          color: black;
+        }
+        a.none {
+          display: none;
+        }
+
+        i.white {
+          color: white;
+        }
+      }
+      li.active {
+        background: $green;
+
+        a {
+          color: white;
+        }
+      }
+      .widdth {
+        width: fit-content;
+      }
+    }
+    .active {
+      background: $green;
+      color: white;
+      a {
+        color: white;
+      }
+    }
+  }
+  .activepage {
+    margin-top: 4.5rem;
+    margin-left: 30%;
+    justify-self: right;
+    width: 73%;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    @include header_two_mobile;
+  }
+  .body {
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    .sidebar {
+      display: none;
+    }
+    .activepage {
+      width: 100%;
+      margin-left: 0;
+      background-color: green;
+    }
+  }
+}
+// .dashboardfooter {
+//   display: flex;
+//   justify-content: end;
+//   footer {
+//     @include footer(80%, black);
+//     justify-self: right;
+//   }
+// }

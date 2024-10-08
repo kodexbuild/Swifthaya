@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard_wallet</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/dashboard_wallet.css" />
+  </head>
+  <body>
+    <div class="box">
+      <header>
+        <h1>Hello Bandalton</h1>
+      </header>
+      <div class="top">
+        <div class="balance">
+          <div class="right">
+            <h3>Total balance</h3>
+            <h1>#150k+</h1>
+          </div>
+          <div class="center">
+            <h3>Total earnings</h3>
+            <h1>#150k+</h1>
+            <small>1 january 2024 - 1 february 2024</small>
+          </div>
+          <div class="left">
+            <h3>Total Withdrawal</h3>
+            <h1>#150k+</h1>
+            <small>1 january 2024 - 1 february 2024</small>
+          </div>
+        </div>
+        <div class="options">
+          <button>fund wallet</button>
+          <button>transfer</button>
+          <button>withdraw funds</button>
+        </div>
+      </div>
+      <div id="columnchart_material"></div>
+      <div class="bottom">
+        <div class="trans_history">
+          <header>
+            <h2>Transaction history</h2>
+            <div class="select">
+              <aside>deposit</aside>
+              <aside>withdrawal</aside>
+              <aside>All status <i class="ri-arrow-down-s-line"></i></aside>
+            </div>
+          </header>
+          <div class="body">
+            <div class="row">
+              <div class="left">
+                <span></span>
+                <div class="text">
+                  <p>received from sarah williams</p>
+                  <p>yesterday 8:47pm</p>
+                </div>
+              </div>
+              <div class="right">
+                <p>#50,00</p>
+                <p>successful</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="left">
+                <span></span>
+                <div class="text">
+                  <p>received from sarah williams</p>
+                  <p>yesterday 8:47pm</p>
+                </div>
+              </div>
+              <div class="right">
+                <p>#50,00</p>
+                <p>successful</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="left">
+                <span></span>
+                <div class="text">
+                  <p>received from sarah williams</p>
+                  <p>yesterday 8:47pm</p>
+                </div>
+              </div>
+              <div class="right">
+                <p>#50,00</p>
+                <p>successful</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="left">
+                <span></span>
+                <div class="text">
+                  <p>received from sarah williams</p>
+                  <p>yesterday 8:47pm</p>
+                </div>
+              </div>
+              <div class="right">
+                <p>#50,00</p>
+                <p>successful</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="left">
+                <span></span>
+                <div class="text">
+                  <p>received from sarah williams</p>
+                  <p>yesterday 8:47pm</p>
+                </div>
+              </div>
+              <div class="right">
+                <p>#50,00</p>
+                <p>successful</p>
+              </div>
+            </div>
+            <div class="btn">
+              <button>view all</button>
+            </div>
+          </div>
+        </div>
+        <div class="total_history">
+          <h1>total history<span></span></h1>
+          <p>paid<span></span></p>
+          <p>cancelled<span></span></p>
+          <p>pending<span></span></p>
+          <p>refunded<span></span></p>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["bar"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["months", "Total balance", "Total Earnings", "Total Withdrawal"],
+          ["jan", 1000, 400, 200],
+          ["feb", 1170, 460, 250],
+          ["mar", 660, 1120, 300],
+          ["apr", 1030, 540, 350],
+          ["may", 1030, 540, 350],
+          ["jun", 1030, 540, 350],
+          ["jul", 1030, 540, 350],
+        ]);
+
+        var options = {
+          textStyle: {
+            color: "black",
+            fontSize: 15,
+            fontFamily: "Arial",
+            fontWeight: "bold",
+          },
+          chart: {
+            title: "Transactions",
+          },
+          colors: ["#81BE00", "#3a4b15", "#b7d871"],
+          hAxis: {
+            position: "top",
+            slanted: true,
+            // viewWindowMode: "maximized",
+          },
+        };
+
+        var chart = new google.charts.Bar(
+          document.getElementById("columnchart_material")
+        );
+        console.log(chart);
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </body>
+</html>
