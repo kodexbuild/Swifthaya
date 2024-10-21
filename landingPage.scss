@@ -1,4 +1,5 @@
 @import "./swifthaya_talent/scss/variable";
+@import "./mediaquery";
 
 *{
     padding: 0;
@@ -78,6 +79,22 @@ header{
             border-radius: 2rem;
         }
     }
+    @include MEDIAQUERY(1024px){
+        // justify-content: space-between;
+        // padding-inline: 3rem;
+        .hamburger{
+            display: block;
+            font-size: 2rem;
+        }
+        .opt-links{
+            display: none;
+        }
+        .auth-links{
+            .post-job{
+                display: none;
+            }
+        }
+    }
 }
 
 .hero{
@@ -119,6 +136,15 @@ header{
             border-radius: 2rem 0 0 2rem;
         }
     }
+    @include MEDIAQUERY(767px){
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        .hero-txt{
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
 .stats{
@@ -131,6 +157,12 @@ header{
     row-gap: 5rem;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    @include MEDIAQUERY(767px){
+        padding-inline: 1rem;
+        h3{
+            font-size: 1rem;
+        }
+    }
     h3{
         grid-column: span 3;
         text-align: center;
@@ -179,12 +211,21 @@ header{
             font-size: 1rem;
             font-weight: 500;
         }
+        @include MEDIAQUERY(767px){
+            grid-template-columns: 1fr;
+        }
     }
     h3:last-of-type{
         margin-top: 5rem;
     }
     main:last-child{
         grid-template-columns: 2fr 1fr; 
+        @include MEDIAQUERY(767px){
+            grid-template-columns: 1fr;
+            .imgWrap{
+                grid-row: 1/3;
+            }
+        }
     }
 }
 
@@ -198,11 +239,18 @@ header{
         margin-top: 2rem;
         height: 550px;
         background-color: #ddf0b2;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         align-items: center;
         gap: 2rem;
         padding-inline: 4rem;
+        @include MEDIAQUERY(767px){
+            grid-template-columns: 1fr;
+            aside:not(:first-child){
+                display: none;
+            }
+        }
         aside{
             height: 400px;
             background-color: white;
@@ -276,6 +324,11 @@ header{
                 font-size: 0.9rem;
             }
         }
+        @include MEDIAQUERY(767px){
+            aside:not(:first-child){
+                display: none;
+            }
+        }
     }
 }
 
@@ -291,6 +344,9 @@ header{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 10px;
+        @include MEDIAQUERY(767px){
+           grid-template-columns: 1fr;
+        }
         a{
             text-decoration: none;
             font-size: 0.8rem;
@@ -301,7 +357,7 @@ header{
 
 .ourApp{
   margin-top: 5rem;
-  width: 85%;
+  width: 90%;
   height: 500px;
   margin-inline: auto;
   background-color: #e6f5c3; 
@@ -310,15 +366,30 @@ header{
   justify-items: center;
   align-items: center;
   border-radius: 2rem;
+  @include MEDIAQUERY(767px){
+    grid-template-columns: 1fr;
+    .txt{
+        width: 100%;
+        text-align: justify;
+    }
+  }
   .txt{
+    width: 70%;
     h3{
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: 400;
     }
     p{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     div{
         margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        img{
+            width: 100px;
+            height: 40px;
+        }
     }
   }
   .imgWrap{
@@ -328,6 +399,73 @@ header{
         width: 100%;
         height: 100%;
         object-fit: cover; 
+    }
+  }
+}
+
+footer{
+  margin-top: 5rem;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding-block: 4rem;
+  .linksection{
+    width:90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include MEDIAQUERY(767px){
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .main{
+        h3{
+            color: $green;
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+    }
+    .left, .center, .right{
+        justify-self: flex-end;
+        @include MEDIAQUERY(767px){
+            justify-self: flex-start;  
+        }
+        h3{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .outline{
+            list-style: none;
+            li{
+                font-size: 0.9rem;
+                a{
+                    text-decoration: none;
+                    color: #eee;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+  }
+  hr{
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .end{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    @include MEDIAQUERY(767px){
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    p{
+        font-size: 0.8rem;
     }
   }
 }

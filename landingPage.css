@@ -97,6 +97,18 @@ header .auth-links .post-job {
   background-color: #81be00;
   border-radius: 2rem;
 }
+@media screen and (max-width: 1024px) {
+  header .hamburger {
+    display: block;
+    font-size: 2rem;
+  }
+  header .opt-links {
+    display: none;
+  }
+  header .auth-links .post-job {
+    display: none;
+  }
+}
 
 .hero {
   width: 90%;
@@ -140,6 +152,16 @@ header .auth-links .post-job {
      object-fit: cover;
   border-radius: 2rem 0 0 2rem;
 }
+@media screen and (max-width: 767px) {
+  .hero {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero .hero-txt h1 {
+    font-size: 2rem;
+  }
+}
 
 .stats {
   height: auto;
@@ -155,6 +177,14 @@ header .auth-links .post-job {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .stats {
+    padding-inline: 1rem;
+  }
+  .stats h3 {
+    font-size: 1rem;
+  }
 }
 .stats h3 {
   -ms-grid-column-span: 3;
@@ -213,12 +243,29 @@ header .auth-links .post-job {
   font-size: 1rem;
   font-weight: 500;
 }
+@media screen and (max-width: 767px) {
+  .cta main {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .cta h3:last-of-type {
   margin-top: 5rem;
 }
 .cta main:last-child {
   -ms-grid-columns: 2fr 1fr;
   grid-template-columns: 2fr 1fr;
+}
+@media screen and (max-width: 767px) {
+  .cta main:last-child {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .cta main:last-child .imgWrap {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
 }
 
 .featuredCont {
@@ -232,9 +279,10 @@ header .auth-links .post-job {
   margin-top: 2rem;
   height: 550px;
   background-color: #ddf0b2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr 2rem 1fr;
+  grid-template-columns: repeat(4, 1fr);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -243,6 +291,15 @@ header .auth-links .post-job {
           align-items: center;
   gap: 2rem;
   padding-inline: 4rem;
+}
+@media screen and (max-width: 767px) {
+  .featuredCont main {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .featuredCont main aside:not(:first-child) {
+    display: none;
+  }
 }
 .featuredCont main aside {
   height: 400px;
@@ -331,6 +388,11 @@ header .auth-links .post-job {
   margin-top: 10px;
   font-size: 0.9rem;
 }
+@media screen and (max-width: 767px) {
+  .testimony main aside:not(:first-child) {
+    display: none;
+  }
+}
 
 .services {
   margin-top: 5rem;
@@ -348,6 +410,12 @@ header .auth-links .post-job {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 10px;
 }
+@media screen and (max-width: 767px) {
+  .services aside {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .services aside a {
   text-decoration: none;
   font-size: 0.8rem;
@@ -356,7 +424,7 @@ header .auth-links .post-job {
 
 .ourApp {
   margin-top: 5rem;
-  width: 85%;
+  width: 90%;
   height: 500px;
   margin-inline: auto;
   background-color: #e6f5c3;
@@ -370,14 +438,36 @@ header .auth-links .post-job {
           align-items: center;
   border-radius: 2rem;
 }
+@media screen and (max-width: 767px) {
+  .ourApp {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .ourApp .txt {
+    width: 100%;
+    text-align: justify;
+  }
+}
+.ourApp .txt {
+  width: 70%;
+}
 .ourApp .txt h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 .ourApp .txt p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .ourApp .txt div {
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.ourApp .txt div img {
+  width: 100px;
+  height: 40px;
 }
 .ourApp .imgWrap {
   width: 100%;
@@ -388,4 +478,85 @@ header .auth-links .post-job {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+footer {
+  margin-top: 5rem;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding-block: 4rem;
+}
+footer .linksection {
+  width: 90%;
+  margin-inline: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 767px) {
+  footer .linksection {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+footer .linksection .main h3 {
+  color: #81be00;
+  font-size: 1.5rem;
+}
+footer .linksection .main p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+footer .linksection .left, footer .linksection .center, footer .linksection .right {
+  justify-self: flex-end;
+}
+@media screen and (max-width: 767px) {
+  footer .linksection .left, footer .linksection .center, footer .linksection .right {
+    justify-self: flex-start;
+  }
+}
+footer .linksection .left h3, footer .linksection .center h3, footer .linksection .right h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+footer .linksection .left .outline, footer .linksection .center .outline, footer .linksection .right .outline {
+  list-style: none;
+}
+footer .linksection .left .outline li, footer .linksection .center .outline li, footer .linksection .right .outline li {
+  font-size: 0.9rem;
+}
+footer .linksection .left .outline li a, footer .linksection .center .outline li a, footer .linksection .right .outline li a {
+  text-decoration: none;
+  color: #eee;
+  font-size: 0.8rem;
+}
+footer hr {
+  width: 90%;
+  margin: 2rem auto;
+}
+footer .end {
+  width: 90%;
+  margin-inline: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  footer .end {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+  }
+}
+footer .end p {
+  font-size: 0.8rem;
 }
