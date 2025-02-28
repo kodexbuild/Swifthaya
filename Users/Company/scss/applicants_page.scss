@@ -1,0 +1,120 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+* {
+  @include box;
+
+  // @include border;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+
+  .applications {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    header {
+      display: flex;
+      padding: 20px;
+      justify-content: space-between;
+      h1 {
+        text-transform: capitalize;
+      }
+      .select {
+        border: 1px solid rgb(172, 168, 168);
+        display: flex;
+        max-height: 3dvw;
+        justify-content: center;
+        padding: 6px;
+        padding-bottom: 0;
+        border-radius: 7px;
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+    }
+    .body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      row-gap: 20px;
+      .application {
+        width: 97%;
+        box-shadow: $box-shadow;
+        .top {
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          .left {
+            width: 65%;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: space-between;
+            .img {
+              width: 12dvw;
+              aspect-ratio: 1;
+              background-image: url(../../../Users/company/assets/Rectangle\ 81.png);
+
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            .text {
+              width: 50%;
+              h4 {
+                font-weight: 700;
+              }
+              p {
+                font-weight: 600;
+              }
+              span {
+                font-weight: 700;
+                opacity: 0.4;
+              }
+            }
+          }
+          .right {
+            display: flex;
+            justify-content: end;
+            max-width: 30%;
+            span {
+              padding-inline: 0.3rem;
+              font-size: 2.5dvw;
+              font-weight: 500;
+            }
+          }
+        }
+        .footer {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-weight: 600;
+          text-transform: capitalize;
+          * {
+            padding: 5px;
+          }
+          span {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    button {
+      width: 40%;
+      padding: 15px;
+      font-size: 1.2dvw;
+      border: none;
+      outline: none;
+      color: white;
+      background: $green;
+    }
+  }
+}

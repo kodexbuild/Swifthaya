@@ -1,0 +1,256 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+* {
+  @include box;
+
+  //   @include border;
+}
+// Function to calculate the lightness based on the nth value
+@function lighten-by-n($base-color, $n, $total) {
+  // Calculate how much to lighten based on the current n value and total range
+  $lighten-amount: calc($n / $total) * 50; // adjust this percentage as needed
+  @return lighten($base-color, $lighten-amount);
+}
+
+.box {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .top {
+    padding: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid grey;
+    header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      padding: 20px;
+      h1 {
+        text-transform: capitalize;
+      }
+      aside {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: $box-shadow;
+        p {
+          text-transform: capitalize;
+        }
+      }
+    }
+    .body {
+      display: flex;
+      justify-content: space-between;
+      text-transform: capitalize;
+      padding: 20px;
+      padding-bottom: 40px;
+      .info {
+        width: calc(100% / 3.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: $box-shadow;
+        padding-block: 20px;
+        padding: 10px;
+
+        h1 {
+          display: flex;
+          align-items: center;
+          .stars {
+            font-size: 1.5dvw;
+            :nth-child(-n + 4) {
+              color: #f7ba12fd;
+            }
+          }
+          .arrow {
+            margin-left: 7px;
+            font-size: 13px;
+            padding: 8px;
+            border-radius: 6px;
+            background: darken($green, 5);
+            color: darken($green, 20);
+            opacity: 0.7;
+          }
+        }
+      }
+      .rating {
+        gap: 1.4rem;
+        align-items: start;
+        justify-content: start;
+        aside {
+          width: 100%;
+          padding: 1px;
+          // Apply the function to nth-child
+        }
+        .greenbar {
+          padding: 6px;
+          // border: 1px solid;
+          position: relative;
+          border-radius: 30px;
+
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              background: lighten-by-n(#1a2501, $i, 5.2);
+            }
+          }
+          &:nth-child(1) {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            width: calc(100% - 10%);
+          }
+          &:nth-child(3) {
+            width: calc(100% - 20%);
+          }
+          &:nth-child(4) {
+            width: calc(100% - 30%);
+          }
+          &:nth-child(5) {
+            width: calc(100% - 40%);
+          }
+          &:nth-child(6) {
+            width: calc(100% - 50%);
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid grey;
+      padding-block: 30px;
+      padding: 10px;
+      .left {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        width: 40%;
+        gap: 2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        .img {
+          width: 10dvw;
+          aspect-ratio: 1;
+          background-image: url(../../../Users/Talent/assets/Rectangle\ 81.png);
+          background-position: center;
+          background-size: cover;
+        }
+        p {
+          &:last-child {
+            opacity: 0.5;
+          }
+        }
+      }
+      .right {
+        padding: 10px;
+        padding-bottom: 20px;
+        width: 60%;
+        font-weight: 500;
+        p {
+          span {
+            i {
+              &:nth-child(-n + 4) {
+                color: #f7ba12fd;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      padding-block: 30px;
+      button {
+        background: $green;
+        color: white;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: 10px;
+        width: 30%;
+        border-radius: 3px;
+        font-size: medium;
+        padding-inline: 30px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .box{
+    padding-top: 70px;
+    .top{
+      padding-inline: 2px;
+     
+      header{
+     
+        width: 100%;
+       display: flex;
+       padding-inline: 7px;
+       justify-content: space-between;
+       align-items: center;
+        h1{
+          width: 30%;
+          font-size: 1.3rem;
+        }
+        aside{
+          width: 70%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: small;
+          padding-inline: 1px;
+        }
+      }
+      .body{
+      width:100%;
+        flex-direction: column;
+        gap:2rem;
+        padding-inline: 6px;
+        .info{
+          width:100%;
+          padding-block:30px;
+          // background:blue;//
+
+             
+        }
+      }
+    }
+    .bottom{
+      .row{
+        align-items: center;
+        flex-direction: column;
+        .left,.right{
+          width: 100%;
+          padding-inline: 4px;
+          gap: 1rem;
+          .img{
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+      .btn{
+        width: 100%;
+        padding-inline: 80px;
+        button{
+          width:100%
+        }
+      }
+    }
+  }
+}

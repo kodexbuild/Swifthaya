@@ -1,0 +1,122 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+* {
+  @include box;
+
+  //   @include border;
+}
+.griid-container{
+  display: flex;
+  flex-direction: column;
+  .header{
+    display: flex;
+    padding: 10px;
+    padding-inline: 50px;
+    padding-top: 30px;
+    box-shadow: 2px 2px 13px rgba( #000000,  0.6);
+    .left{
+      width: 50%;
+      span{
+        font-size: 1.2rem;
+      }
+      input{
+        width: 80%;
+        padding: 10px;
+        border: 0;
+        outline: none;
+      }
+    }
+    .right{
+      width: 50%;
+      display: flex;
+      gap: 10px;
+      justify-content: end;
+      .opt_ion{
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        font-size: 13.5px;
+        border-radius: 10px;
+        border: 1px solid #d6cfcf;
+        
+      }
+      .green{
+        background-color: $green;
+        color: white;
+        border: 0;
+        font-weight: 600;
+      }
+    }
+  }
+  .griid{
+    .row{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      padding: 15px;
+      .column{
+        width: 50%;
+        padding: 10px;
+        box-shadow: $box-shadow;
+       .top{
+        display: flex;
+        padding: 8px;
+        padding-bottom: 20px;
+        justify-content: space-between;
+        aside{
+          display: flex;
+          gap: 15px;
+          .img{
+            width: 100px;
+            height: 100px;
+            background-size:cover;
+            background-position: center;
+          }
+          .text{
+            p{
+              padding: 10px;
+              &:last-child{
+                opacity: 0.4;
+              }
+            }
+          }
+        }
+        .icons{
+          display: flex;
+          align-items:first baseline ;
+          gap: 1.2rem;
+          span{
+            font-size: 1.6rem;
+          }
+        }
+       }
+       .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        aside{
+          p{
+            &:last-child{
+              opacity: 0.6;
+            }
+          }
+        }
+        .btn{
+          button{
+            background-color: $green;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            padding: 7px;
+            padding-inline: 40px;
+            font-size: 1rem;
+            background-color: $green;
+            color: white;
+          }
+        }
+       }
+      }
+    }
+  }
+}

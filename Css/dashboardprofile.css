@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+body .box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body .box .caption {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+body .box .caption .headertxt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+body .box .caption .headertxt h1 {
+  width: 100%;
+}
+body .box .caption .headertxt p {
+  opacity: 0.6;
+}
+body .box .caption .img {
+  display: none;
+  width: 60px;
+  aspect-ratio: 1;
+  background: url(../../../Users/Talent/assets/Ellipse\ 26.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+}
+body .box .caption h4.pick {
+  width: 100%;
+  text-transform: capitalize;
+}
+body .box .caption h4.pick .picks {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0.2rem;
+  position: relative;
+}
+body .box .caption h4.pick .picks .boxes {
+  width: 80%;
+  scale: 0.8;
+  display: flex;
+  justify-content: center;
+  z-index: -3;
+  gap: 0.5rem;
+  padding: 0;
+}
+body .box .caption h4.pick .picks .boxes .container {
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+  border: 1px solid rgb(189, 185, 185);
+  border-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+body .box .caption h4.pick .picks .boxes .container .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+body .box .caption h4.pick .picks .boxes .container .top .img {
+  background: url(../../../Users/Talent/assets/AI\ Image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 4dvw;
+  aspect-ratio: 1;
+  border-radius: 100%;
+}
+body .box .caption h4.pick .picks .boxes .container .top p {
+  width: 2dvw;
+  display: flex;
+  font-size: 1dvw;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background: #81be00;
+  border-radius: 100%;
+  color: white;
+  padding-inline: 30px;
+}
+body .box .caption h4.pick .picks .boxes .container .top p i {
+  font-size: 3dvw;
+}
+body .box .caption h4.pick .picks .boxes .container .mid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body .box .caption h4.pick .picks .boxes .container .mid p {
+  font-size: 1dvw;
+  opacity: 0.6;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+body .box .caption h4.pick .picks .boxes .container .mid p:first-child {
+  font-weight: 600;
+  opacity: 1;
+}
+body .box .caption h4.pick .picks .boxes .container .mid p:last-child {
+  opacity: 0.3;
+}
+body .box .caption h4.pick .picks .boxes .container .floor {
+  display: flex;
+  z-index: -1;
+  align-items: center;
+  justify-content: space-between;
+  color: #81be00;
+  width: 100%;
+}
+body .box .caption h4.pick .picks .boxes .container .floor button {
+  padding: 4px;
+  color: #81be00;
+  background-color: white;
+  border: 1px solid #81be00;
+  padding-inline: 14px;
+  border-radius: 10px;
+  outline: none;
+}
+body .box .caption h4.pick .picks .rightbox {
+  position: absolute;
+  z-index: 7;
+  background-color: white;
+  right: 0;
+  top: -30px;
+  padding-inline: 1rem;
+  max-width: 43%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+body .box .caption h4.pick .picks .rightbox .img {
+  width: 10dvw;
+  aspect-ratio: 1;
+  background: url(../../../Users/Talent/assets/Ellipse\ 26.jpg);
+  z-index: 8;
+  background-size: cover;
+  border-radius: 100%;
+  margin-bottom: -50px;
+}
+body .box .caption h4.pick .picks .rightbox .card {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  padding: 10px;
+  padding-top: 45px;
+  padding-inline: 20px;
+  flex-direction: column;
+  gap: 0.2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+body .box .caption h4.pick .picks .rightbox .card .yellow span {
+  color: #f7cf02;
+}
+body .box .caption h4.pick .picks .rightbox .textbelow {
+  padding: 10px;
+  font-size: 1dvw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+body .box .caption h4.pick .projectsbox {
+  margin-top: 20px;
+  padding-top: 50px;
+  display: flex;
+  gap: 2rem;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer {
+  flex-grow: 1;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .header {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .header h1 {
+  padding: 10px;
+  font-size: 1.4dvw;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .header h4 {
+  text-transform: capitalize;
+  font-size: 1.4dvw;
+  padding: 10px;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .header span {
+  font-size: 1.2dvw;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #81be00;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .projectsbody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .projectsbody .project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .projectsbody .project .text {
+  width: 60%;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .projectsbody .project .text p {
+  width: 100%;
+  opacity: 0.4;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .projectsbody .project button {
+  min-width: 30%;
+  max-height: 50%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #81be00;
+  color: white;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .messages {
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 10px;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .messages .message {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 8px;
+  align-items: center;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .messages .message .picture {
+  width: 5dvw;
+  aspect-ratio: 1;
+  background: url(../../../Users/Talent/assets/Rectangle\ 81.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-size: contain;
+  overflow: hidden;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .messages .message .picture img {
+  width: 100%;
+  height: 100%;
+}
+body .box .caption h4.pick .projectsbox .projectcontainer .messages .message .text {
+  width: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  body .box .caption {
+    display: flex;
+    width: 100%;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body .box .caption .headertxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  body .box .caption .headertxt h1 {
+    width: 100%;
+  }
+  body .box .caption .headertxt p {
+    opacity: 0.6;
+  }
+  body .box .caption .img {
+    display: flex;
+  }
+  body .box .picks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.2rem;
+    position: relative;
+  }
+  body .box .picks .boxes {
+    min-width: 80vw;
+    scale: 1;
+    display: flex;
+    justify-content: center;
+    z-index: -3;
+    gap: 0.5rem;
+    padding: 0;
+  }
+  body .box .picks .boxes .container {
+    width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    border: 1px solid rgb(189, 185, 185);
+    border-top: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+  body .box .picks .boxes .container .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  body .box .picks .boxes .container .top .img {
+    background: url(../../../Users/Talent/assets/AI\ Image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 4dvw;
+    aspect-ratio: 1;
+    border-radius: 100%;
+  }
+  body .box .picks .boxes .container .top p {
+    width: 2dvw;
+    display: flex;
+    font-size: 1dvw;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    background: #81be00;
+    border-radius: 100%;
+    color: white;
+    padding-inline: 30px;
+  }
+  body .box .picks .boxes .container .top p i {
+    font-size: 3dvw;
+  }
+  body .box .picks .boxes .container .mid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body .box .picks .boxes .container .mid p {
+    font-size: 1dvw;
+    opacity: 0.6;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  body .box .picks .boxes .container .mid p:first-child {
+    font-weight: 600;
+    opacity: 1;
+  }
+  body .box .picks .boxes .container .mid p:last-child {
+    opacity: 0.3;
+  }
+  body .box .picks .boxes .container .floor {
+    display: flex;
+    z-index: -1;
+    align-items: center;
+    justify-content: space-between;
+    color: #81be00;
+    width: 100%;
+  }
+  body .box .picks .boxes .container .floor button {
+    padding: 4px;
+    color: #81be00;
+    background-color: white;
+    border: 1px solid #81be00;
+    padding-inline: 14px;
+    border-radius: 10px;
+    outline: none;
+  }
+  body .box .picks .rightbox {
+    display: none;
+  }
+  body .box .picks .textbelow {
+    padding: 10px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  body .box .projectsbox {
+    display: flex;
+    flex-direction: column;
+  }
+  body .box .projectsbox .projectcontainer .header h1, body .box .projectsbox .projectcontainer .header h4 {
+    font-size: 1.2em;
+  }
+  body .box .projectsbox .projectcontainer .header span {
+    font-size: 1em;
+  }
+  body .box .projectsbox .projectcontainer .messages .message .picture {
+    width: 80px;
+    height: 80px;
+    aspect-ratio: none;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  body .box .projectsbox .projectcontainer .messages .message .picture img {
+    width: 100%;
+    height: 100%;
+  }
+}/*# sourceMappingURL=dashboardprofile.css.map */

@@ -1,0 +1,178 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+
+* {
+  @include box;
+  //   @include border;
+}
+.box {
+  padding: 10px;
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .topcontent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .navbox {
+        display: flex;
+        padding-inline: 30px;
+        justify-content: space-between;
+
+        .selectbox {
+          width: 60%;
+          display: flex;
+          gap: 20px;
+
+          .selectcontent {
+            select {
+              text-transform: capitalize;
+              padding: 10px;
+              border: 1px solid grey;
+              padding-inline: 2dvw;
+            }
+          }
+        }
+
+        aside {
+          .select {
+            padding: 10px;
+            padding-inline: 2dvw;
+            background: $green;
+            color: white;
+            font-weight: 600;
+          }
+        }
+      }
+      .infocontainer {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 10px;
+        .info {
+          box-shadow: $box-shadow;
+          padding: 20px;
+          text-transform: capitalize;
+          padding-top: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: calc((100% / 4) - 10px);
+          gap: 1rem;
+          p {
+            font-weight: 500;
+            font-size: 1.5dvw;
+          }
+          button {
+            padding: 8px;
+            padding-inline: 20px;
+            background: $green;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .bottomcontent {
+      padding-inline: 5px;
+      .table {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        box-shadow: $box-shadow;
+        padding-block: 10px;
+        padding-inline: 10px;
+        border: 1px solid rgb(238, 229, 229);
+        .head {
+          display: grid;
+          align-items: center;
+          .column {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+
+            p {
+              text-align: center;
+              text-transform: capitalize;
+              font-weight: 700;
+
+              // &:first-child {
+              //   text-align: left;
+              // }
+              // &:nth-child(3),
+              // &:nth-child(4) {
+              //   grid-column: span 2;
+
+              //   // text-align: left;
+              // }
+            }
+          }
+        }
+        .body {
+          display: grid;
+          width: 100%;
+          padding: 0px;
+          gap: 18px 0px;
+
+          .row {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(7, 1fr);
+            align-items: center;
+            .column {
+              text-align: center;
+              text-transform: capitalize;
+              .login {
+                outline: none;
+                border: none;
+                padding: 4px;
+                padding-inline: 14px;
+                border-radius: 4px;
+                color: white;
+                background: $green;
+              }
+
+              // &:nth-child(3),
+              // &:nth-child(4) {
+              //   grid-column: span 2;
+              // }
+
+              &:nth-child(4) {
+                button {
+                  padding: 4px;
+                  text-transform: capitalize;
+                  outline: none;
+                  border: none;
+                  padding-inline: 10px;
+                  border-radius: 10px;
+                  background: lighten(#c0df80, 10);
+                  color: $green;
+                }
+                .red {
+                  background: #faacac;
+                  color: rgb(235, 70, 70);
+                }
+                .blue {
+                  background-color: #a4a4f3;
+                  color: #2a2acc;
+                }
+                .orange {
+                  background: rgb(253, 205, 115);
+                  color: orange;
+                }
+                &:last-child {
+                  span {
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

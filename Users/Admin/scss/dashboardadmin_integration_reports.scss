@@ -1,0 +1,135 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+* {
+  @include box;
+
+  // @include border;
+}
+.box {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  .top {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    gap: 2rem;
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      font-weight: 600;
+      text-transform: capitalize;
+      p {
+        color: grey;
+        span {
+          color: black;
+        }
+      }
+      .img {
+        background: red;
+        width: 4dvw;
+        aspect-ratio: 1;
+        border-radius: 100%;
+      }
+    }
+
+    .form {
+      padding: 20px;
+      box-shadow: $box-shadow;
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        text-transform: capitalize;
+        font-weight: 600;
+        .row {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          align-items: center;
+          gap: 3rem;
+
+          .input {
+            display: flex;
+            flex-direction: column;
+            label {
+              padding: 10px;
+            }
+            input {
+              padding: 20px;
+              border-radius: 20px;
+              outline: none;
+              border: 1px solid grey;
+              &::placeholder {
+                color: black;
+                font-weight: 600;
+                opacity: 0.8;
+                text-transform: capitalize;
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    header {
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 2dvw;
+    }
+    p {
+      max-width: 800px;
+      background: aliceblue;
+      padding: 20px;
+    }
+    .top {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 80%;
+      min-width: 40%;
+      justify-content: space-between;
+      text-transform: capitalize;
+      .left {
+        display: flex;
+        flex-direction: column;
+        p {
+          padding: 10px;
+          background-color: aliceblue;
+        }
+      }
+      h5 {
+        font-size: 1.2rem;
+      }
+      .left {
+        background: aliceblue;
+      }
+    }
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      h4 {
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 1.5dvw;
+        padding: 20px;
+      }
+      p {
+        background-color: aliceblue;
+        padding: 10px;
+      }
+    }
+  }
+}

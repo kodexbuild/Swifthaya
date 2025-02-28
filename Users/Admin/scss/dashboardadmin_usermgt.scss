@@ -1,0 +1,276 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+
+* {
+  @include box;
+  //   @include border;
+}
+.box {
+  padding: 10px;
+  header {
+    padding: 10px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 2.3dvw;
+    }
+    nav {
+      display: flex;
+      color: grey;
+      width: 16%;
+      padding: 10px;
+      border: 1px solid rgb(184, 182, 182);
+      align-items: center;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        color: grey;
+        font-weight: 600;
+      }
+      .active {
+        color: black;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          background: $green;
+          bottom: -8px;
+          left: 0;
+        }
+      }
+    }
+    aside {
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      color: grey;
+    }
+  }
+
+  .body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    .members {
+      display: none;
+      header {
+        display: flex;
+        align-items: center;
+        .left {
+          display: flex;
+          gap: 2rem;
+          padding: 20px;
+
+          button {
+            font-weight: 600;
+            padding: 8px;
+            box-shadow: $box-shadow;
+            text-transform: capitalize;
+            outline: none;
+            background-color: white;
+            border: none;
+          }
+          .add {
+            background: $green;
+            color: white;
+          }
+        }
+        .right {
+          .filter {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            padding-inline: 20px;
+            background: $green;
+            box-shadow: $box-shadow;
+            color: white;
+          }
+        }
+      }
+      .table {
+        width: 100%;
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          thead {
+            background: #c0df80;
+            th {
+              padding: 20px;
+            }
+          }
+          tbody {
+            tr {
+              border-bottom: 1px solid grey;
+              border-inline: 1px solid grey;
+
+              td {
+                text-align: center;
+                .img {
+                  background: url("https://s3-alpha-sig.figma.com/img/1b16/7ef6/e36fad6a838f885f660f1aed390cf014?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=av4LgVSvZMXLORK9ZfacGa1v-m0ArMAB34kvCAEUsy8r5vtsrxVa2-1N5klHi2BwH7DqpSORAwTNBcnaeOyAt7L2Kfh-XgAEJxZQYbskAf8YKDC7eX1OAyODgKPqm0gBOJsuvSeak0FY0aQNBkWk14f-7k7FxSYTTpJVLxTDIXYuwDOgUECu7ElQm~~G2s7gnyOojJMxOKZboyBddIrPAwUG7q8Ce5~TMDUhkCzUq9AKNHPhEv6GbcZ-OMsEVyvYom7jsQaJlK7q2UWrGHJV5BMKOZs-CuytL5K8GRR9xZro5POFklT0yC-TOwke9Ml8lp3DlaAvF3BGP6RAYqtrPg__");
+                  background-position: center;
+                  background-size: cover;
+                }
+                .mandy {
+                  background: url(https://s3-alpha-sig.figma.com/img/6c4c/14fa/9304536d8ca1b2bee8c22a0f87e0106f?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GbSW4rZvS2Dpl0kpD~6DQqSefeQBELvmnc6Cq3~qSgNd3HLMbnXSdVdvQyRMt8X83tb6PqU1Z~NuPUKiiqhYAB0zXhs1iKbHjBZeA6CEj1R~L5X0f1wph8omiPjlcN36kcTqgxLMX5OAJbHzfklCj0Qe0pmH30~cU3K9Zn75NuelRbQfOQm-KAB06fR0S9osQpTmTviBBbuuHNfhz9X4UYL-Kz8z0XjF04s1cfIvy52ifAUig8E595V7WkfybWNiGYrREtBP7coPpn-ADLwTy~ZYfdIXFdgnHK863ieRUVqAwspyjnQQt5KgJFFwRr1rk7NhWKQ8jY4yN06m3q9UrQ__);
+                  background-position: center;
+                  background-size: cover;
+                }
+                .box {
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  .img {
+                    width: 20%;
+                    background-color: red;
+                    border-radius: 100%;
+                    float: left;
+                    aspect-ratio: 1;
+                  }
+                }
+                .active {
+                  background-color: lighten(#c0df80, 10);
+                  padding: 6px;
+                  border-radius: 40px;
+                  padding-inline: 20px;
+                  color: $green;
+                }
+                .inactive {
+                  color: #cf3535;
+                  background-color: lighten(#cf3535, 30);
+                  padding: 6px;
+                  border-radius: 40px;
+                  padding-inline: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .company {
+      header {
+        display: flex;
+        align-items: center;
+        .left {
+          display: flex;
+          gap: 2rem;
+          padding: 20px;
+
+          button {
+            font-weight: 600;
+            padding: 8px;
+            box-shadow: $box-shadow;
+            text-transform: capitalize;
+            outline: none;
+            background-color: white;
+            border: none;
+          }
+          .add {
+            background: $green;
+            color: white;
+          }
+        }
+        .right {
+          .filter {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            padding-inline: 20px;
+            background: $green;
+            box-shadow: $box-shadow;
+            color: white;
+          }
+        }
+      }
+      .table {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        box-shadow: $box-shadow;
+        padding-block: 20px;
+        padding-inline: 10px;
+        .head {
+          display: grid;
+          align-items: center;
+          .column {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+
+            p {
+              text-align: center;
+              text-transform: capitalize;
+              font-weight: 700;
+
+              &:first-child {
+                text-align: left;
+              }
+              &:nth-child(3),
+              &:nth-child(4) {
+                grid-column: span 2;
+
+                // text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+    .body {
+      display: grid;
+      width: 100%;
+      padding: 0;
+      gap: 18px 0px;
+
+      .row {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(9, 1fr);
+        align-items: center;
+        .column {
+          text-align: center;
+          .login {
+            outline: none;
+            border: none;
+            padding: 4px;
+            padding-inline: 14px;
+            border-radius: 4px;
+            color: white;
+            background: $green;
+          }
+          .img {
+            background: url(https://s3-alpha-sig.figma.com/img/6c4c/14fa/9304536d8ca1b2bee8c22a0f87e0106f?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GbSW4rZvS2Dpl0kpD~6DQqSefeQBELvmnc6Cq3~qSgNd3HLMbnXSdVdvQyRMt8X83tb6PqU1Z~NuPUKiiqhYAB0zXhs1iKbHjBZeA6CEj1R~L5X0f1wph8omiPjlcN36kcTqgxLMX5OAJbHzfklCj0Qe0pmH30~cU3K9Zn75NuelRbQfOQm-KAB06fR0S9osQpTmTviBBbuuHNfhz9X4UYL-Kz8z0XjF04s1cfIvy52ifAUig8E595V7WkfybWNiGYrREtBP7coPpn-ADLwTy~ZYfdIXFdgnHK863ieRUVqAwspyjnQQt5KgJFFwRr1rk7NhWKQ8jY4yN06m3q9UrQ__);
+            background-position: center;
+            background-size: cover;
+            width: 50%;
+            aspect-ratio: 1;
+          }
+          &:nth-child(3),
+          &:nth-child(4) {
+            grid-column: span 2;
+          }
+
+          &:nth-child(5) {
+            button {
+              padding: 4px;
+              outline: none;
+              border: none;
+              padding-inline: 10px;
+              border-radius: 10px;
+              background: lighten(#c0df80, 10);
+              color: $green;
+            }
+            &:nth-child(6) {
+              span {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

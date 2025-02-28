@@ -1,0 +1,122 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+
+* {
+  @include box;
+
+  //   @include border;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  .top {
+    header {
+      h1 {
+        font-size: 2dvw;
+        text-transform: capitalize;
+        padding: 20px;
+      }
+    }
+    .three-boxes {
+      display: flex;
+     
+      .box {
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        align-items: center;
+        padding: 20px;
+        gap: 1rem;
+        box-shadow: $box-shadow;
+        // width: calc(100% / 3);
+        width: calc((100% / 3));
+      }
+    }
+  }
+  .applications {
+    display: flex;
+    flex-direction: column;
+    header {
+      display: flex;
+      padding: 20px;
+      justify-content: space-between;
+      h1 {
+        text-transform: capitalize;
+      }
+      .select {
+        border: 1px solid rgb(172, 168, 168);
+        display: flex;
+        padding: 6px;
+        border-radius: 7px;
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+    }
+    .body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      row-gap: 20px;
+      .application {
+        width: 97%;
+        box-shadow: $box-shadow;
+        .top {
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          .left {
+            width: 65%;
+            display: flex;
+            justify-content: space-between;
+            .img {
+              width: 12dvw;
+              aspect-ratio: 1;
+              background-image: url(https://s3-alpha-sig.figma.com/img/77d0/2af9/88ce6be2984813db8fb5f6cff8d0c905?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hWMdNI7IS~hc7~93gdtyoIKldNNvpvdi0dwo4kZQholIvaxKR2yTj1Xm1pg3FTxWtkTDgIs1I2QSxXsx7yrtPxYzqVhJLSbvXthZKkvSieAk63BTa5iy5wbGpozHDeO91QFppFSEZmxc3LqIxd3FOMdsVCCYqD~q4dTbHZmlJpTw449T6Ps3LjGZpZeYC-zmWCaS7ZZu~ILn0ikg1eDb-xo~P-PaKHwVqiGgujjIhfwEYbuhPpqm-bcepgmARJ6kvgiP4L1hEBhUhe-1zLM~oWaCStx5i5YJQZNnl5NfFInV17CIMWSaFM8iWq0dSyBhICwn1Rn~dNmjbC8UM8hN7w__);
+
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            .text {
+              width: 50%;
+              h4 {
+                font-weight: 700;
+              }
+              p {
+                font-weight: 600;
+              }
+              span {
+                font-weight: 700;
+                opacity: 0.4;
+              }
+            }
+          }
+          .right {
+            display: flex;
+            justify-content: end;
+            max-width: 30%;
+            span {
+              padding-inline: 0.3rem;
+              font-size: 2.5dvw;
+              font-weight: 500;
+            }
+          }
+        }
+        .footer {
+          padding: 20px;
+          text-align: right;
+          font-weight: 600;
+          text-transform: capitalize;
+          * {
+            padding: 5px;
+          }
+          span {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}

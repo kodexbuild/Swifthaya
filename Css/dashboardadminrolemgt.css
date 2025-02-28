@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.box {
+  width: 100%;
+}
+.box .header {
+  display: flex;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  z-index: 34;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  padding-inline: 100px;
+  border-bottom: 1px solid grey;
+}
+.box .header .left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.box .header .left span {
+  display: none;
+}
+.box .header .left h3 {
+  display: none;
+  color: #81be00;
+}
+.box .header .center .search input {
+  padding: 10px;
+  text-indent: 10px;
+  border: none;
+  outline: none;
+}
+.box .header .right {
+  display: flex;
+}
+.box .header .right .select {
+  display: flex;
+  flex-direction: column;
+}
+.box .header .right .select select {
+  color: grey;
+  border: none;
+}
+.box .header .right .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 8px;
+}
+.box .header .right .icons span:first-child {
+  font-size: 1.3rem;
+}
+.box .header .right .icons span:last-child {
+  font-size: 2rem;
+}
+.box .body h1 {
+  width: 100%;
+  padding-inline: 20px;
+  padding-block: 20px;
+}
+.box .body .searchbox {
+  width: 100%;
+  padding-inline: 40px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 0.5px 3px 2 px rgba(0, 0, 0, 0.2);
+}
+.box .body .searchbox .search {
+  padding: 10px;
+  padding-inline: 10px;
+  width: 50%;
+}
+.box .body .searchbox .search input {
+  width: 90%;
+  border: none;
+  outline: none;
+  text-indent: 10px;
+}
+.box .body .searchbox .search input::-moz-placeholder {
+  text-indent: 10px;
+}
+.box .body .searchbox .search input::placeholder {
+  text-indent: 10px;
+}
+.box .body .searchbox .select {
+  color: grey;
+}
+.box .body .searchbox .select select {
+  color: grey;
+}
+.box .body .searchbox .select select optgroup {
+  color: grey;
+}
+.box .body .searchbox .select select optgroup option {
+  color: grey;
+}
+.box .body .table {
+  padding-bottom: 1rem;
+}
+.box .body .table table {
+  width: 100%;
+  height: 100%;
+  gap: 200px;
+  border-collapse: collapse;
+}
+.box .body .table table colgroup col {
+  width: 25%;
+}
+.box .body .table table thead tr {
+  border-bottom: 1px solid grey;
+}
+.box .body .table table thead tr th {
+  padding: 20px;
+}
+.box .body .table table tbody tr {
+  border-bottom: 1px solid grey;
+}
+.box .body .table table tbody tr td {
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+}
+.box .body .button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.box .body .button button {
+  background: #81be00;
+  padding-inline: 4rem;
+  padding-block: 10px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}/*# sourceMappingURL=dashboardadminrolemgt.css.map */

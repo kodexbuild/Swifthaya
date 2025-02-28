@@ -1,0 +1,132 @@
+// @import "_variable";
+// @import "./mediaquery";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family:poppins;
+}
+header{
+  padding-block:20px;
+  h1{
+    text-transform:capitalize;
+    font-weight:600;
+  }
+}
+
+section{
+  padding:10px;
+  
+}
+.pictureicons{
+  display:flex;
+  
+}
+.picture{
+  height:100px;
+ width:100px;
+  border-radius:50%;
+  background:grey;
+  
+}
+.caption{
+  text-transform:capitalize;
+}
+.right div i.ri-upload-2-line{
+   font-size:2cm;
+  margin-left:10px;
+  color:grey;
+}
+.right p{
+  font-weight:400;
+  color:grey;
+}
+.info * {
+  font-weight:600;
+  text-transform:capitalize;
+}
+.info h2{
+  opacity:.8;
+  color:black;
+  font-size:1.2rem
+}
+.info .text p{
+  font-weight:300;
+}
+.info .text{
+  margin-top:5px;
+  padding:4px;
+  border:1px solid grey;
+}
+.socials h2{
+  text-transform:capitalize;
+  
+}
+.socials .bottom .social{
+  display:flex;
+  align-items :center;
+  gap:6px;
+  
+}
+.social span > *{
+  font-size:2rem;
+  
+}
+.social p{
+  text-transform:capitalize;
+ width:90%;
+  font-weight:600;
+  padding:7px;
+  border:1px solid grey;
+}
+.social{
+  opacity:.7;
+  width:100%;
+}
+.resume{
+  display:flex;
+  flex-direction:column;
+/*   justify-content:center;
+  align-items:center; */
+}
+
+.resume .top h2{
+  text-transform:capitalize;
+  
+}
+.resume .bottom{
+  padding:10px;
+  display:flex;
+  justify-content:center;
+  align-item:center;
+}
+.bottom .icon > *{
+  font-size:4rem;
+  opacity:.7;
+}
+.bottom .container p{
+  font-weight:600;
+}
+.bottom .container .text p span{
+  opacity:.3;
+}
+.bottom .container  .text :nth-child(2){
+   opacity:.3;
+}
+.btn{
+  display:flex;
+  justify-content:right;
+  gap:1.6rem;
+}
+.btn button{
+  padding-inline:10px;
+  padding-block:8px;
+  text-transform:capitalize;
+  outline:none;
+  border :1px solid grey;
+  border-radius:6px;
+    
+}
+.btn :nth-child(2){
+  background:black;
+  color:white;
+}

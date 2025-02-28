@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="landingPage.css">
+    <link rel="stylesheet" href="Css/landingPage.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
@@ -31,8 +31,8 @@
             </div>
         </nav>
         <div class="auth-links">
-            <a href="">Login</a>
-            <a href="">Signup</a>
+            <a href="login.html">Login</a>
+            <a href="" id="signup-button">Signup</a>
             <a href="" class="post-job">Post a Job</a>
         </div>
     </header>
@@ -302,5 +302,13 @@
             </aside>
         </div>
       </footer>
+      <script>
+       const signupbutton= document.getElementById('signup-button')
+       signupbutton.addEventListener('click', (e) => {
+         e.preventDefault()
+         
+            window.location.href='/usertype.html'
+});
+      </script>
 </body>
 </html>

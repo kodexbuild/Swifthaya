@@ -1,0 +1,81 @@
+@import "../../../Scss/variable";
+@import "../../../Scss/mixin";
+
+* {
+  @include box;
+  //   @include border;
+}
+body {
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  // position: fixed;
+  .scrolled {
+    background-color: black;
+    color: white;
+  }
+}
+.header {
+  @include header-two;
+  transition: all 0.3s ease-in-out;
+}
+.body {
+  display: flex;
+  .sidebar {
+    width: 33%;
+    margin-top: 4.5rem;
+    // position: fixed;
+    padding-block: 20px;
+    padding-left: 20px;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      li {
+        display: flex;
+        gap: 10px;
+        padding-block: 15px;
+        padding-inline: 10px;
+        border: 1px solid transparent;
+        transition: all 0.2s ease-in-out;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        &:hover {
+          background: transparent;
+          border: 1px solid $green;
+          color: white;
+          a {
+            color: $green;
+          }
+        }
+      }
+      li.active {
+        background: $green;
+        color: white;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  .activepage {
+    margin-top: 4.5rem;
+    width: 68%;
+    padding: 20px;
+  }
+}
+
+.dashboardfooter {
+  display: flex;
+  justify-content: end;
+  footer {
+    @include footer(80%, black);
+    justify-self: right;
+  }
+}
