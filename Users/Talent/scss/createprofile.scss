@@ -5,8 +5,13 @@
 *{
   font-family:poppins;
 }
+
+.section{
+  background-color: #eee;
+}
 header{
   padding-block:20px;
+  background-color: inherit;
   h1{
     text-transform:capitalize;
     font-weight:600;
@@ -14,49 +19,55 @@ header{
 }
 
 section{
-  padding:10px;
-  
+  padding: 1.2rem;
+  width: 100%;
+  background-color: white;
 }
-.pictureicons{
-  display:flex;
-  
-}
+
 .picture{
-  height:100px;
- width:100px;
-  border-radius:50%;
-  background:grey;
-  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .imgwrap{
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    background:rgb(173, 172, 172);
+  }
+  .right {
+    font-size: 1.2rem;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
 }
-.caption{
-  text-transform:capitalize;
+
+.info_box{
+  margin-top: 2rem;
+  width: 100%;
 }
-.right div i.ri-upload-2-line{
-   font-size:2cm;
-  margin-left:10px;
-  color:grey;
-}
-.right p{
-  font-weight:400;
-  color:grey;
-}
-.info * {
+.info {
+  width: 100%;
   font-weight:600;
   text-transform:capitalize;
+  h2{
+    opacity:.8;
+    color:black;
+    font-size:1.2rem;
+  }
+  .text {
+    width: 100%;
+    margin-top:5px;
+    padding:4px;
+    border:1px solid grey;
+    outline: none;
+    p{
+      font-weight:300;
+    }
+  }
 }
-.info h2{
-  opacity:.8;
-  color:black;
-  font-size:1.2rem
-}
-.info .text p{
-  font-weight:300;
-}
-.info .text{
-  margin-top:5px;
-  padding:4px;
-  border:1px solid grey;
-}
+
 .socials h2{
   text-transform:capitalize;
   
@@ -97,7 +108,7 @@ section{
   padding:10px;
   display:flex;
   justify-content:center;
-  align-item:center;
+  align-items:center;
 }
 .bottom .icon > *{
   font-size:4rem;

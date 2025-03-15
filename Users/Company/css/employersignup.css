@@ -10,7 +10,6 @@
 
 body {
   width: 100%;
-  position: relative;
 }
 
 .header {
@@ -162,27 +161,21 @@ body {
 }
 
 .container {
-  height: 600px;
+  min-height: 690px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100;
+  width: 100%;
 }
 .container .heroimg {
   width: 40%;
-  height: 100%;
-  background-position: center;
+  background: url(../../../Users/Individual/assets/people.jpeg);
+  background-repeat: no-repeat;
   background-size: cover;
-}
-.container .heroimg img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .container .form {
   padding: 20px;
-  padding-top: 100px;
+  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,7 +189,6 @@ body {
   width: 60%;
 }
 .container .form form {
-  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,6 +200,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  width: 90%;
+  margin-inline: auto;
 }
 .container .form form .caption {
   width: 100%;
@@ -240,6 +234,14 @@ body {
 .container .form form .inputs label {
   margin-left: 15px;
 }
+.container .form form .inputs .double-input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 20px;
+}
 .container .form form .inputs .input {
   width: 100%;
   overflow: hidden;
@@ -252,24 +254,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 3px;
 }
 .container .form form .inputs .input input {
   border: none;
   outline: none;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   text-indent: 2px;
 }
-.container .form form .forgotpass {
+.container .form form .signupbtn {
   width: 100%;
-  color: #81be00;
-  text-align: end;
-  text-decoration: none;
-}
-.container .form form .loginbtn {
-  width: 100%;
-  padding: 15px;
+  padding: 10px;
   margin: 10px auto;
   font-weight: 600;
   border-radius: 7px;
@@ -277,6 +272,14 @@ body {
   text-align: center;
   border: none;
   background-color: #73aa00;
+}
+.container .form form .signupbtn .yellow {
+  display: inline-block;
+  background-color: #f1d326;
+  color: black;
+  font-weight: 600;
+  padding: 3px;
+  border-radius: 5px;
 }
 .container .form form .login {
   font-size: small;
@@ -609,24 +612,45 @@ footer .end .icons span {
     text-decoration: none;
   }
   .container {
-    margin-top: 43px;
+    margin-top: 40px;
   }
   .container .heroimg {
     display: none;
+    width: 0px;
   }
   .container .form {
-    padding: 10px;
-    padding-top: 50px;
     width: 100%;
   }
   .container .form form {
-    background-color: white;
     width: 100%;
-    padding: 10px;
-    border-radius: 15px;
+    display: block;
+  }
+  .container .form form .inputs {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container .form form .caption {
+    gap: 1rem;
+    width: 70%;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    margin-bottom: 30px;
+  }
+  .container .form form .caption * {
+    text-align: left;
+  }
+  .container .form form .login {
+    width: 100%;
+    text-align: center;
   }
   .container .form form .alternative p::before, .container .form form .alternative p::after {
     width: 120px;
+  }
+  .container .form form .socials {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer {
     padding-top: 10px;

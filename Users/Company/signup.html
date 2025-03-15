@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>company Signup</title>
-    <link rel="stylesheet" href="../../Css/employersignup.css" />
+    <link rel="stylesheet" href="css/employersignup.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -65,52 +65,59 @@
             <p>Create your <span>Swifthaya</span> account to get started</p>
           </div>
           <div class="inputs">
-            <div class="input">
-              <label for=""><i class="ri-community-line"></i></label>
-              <input type="text" placeholder=" Company’s name" />
-            </div>
-
-            <div class="input">
-              <label for=""><i class="ri-global-line"></i></label>
-              <input type="text" placeholder="Company’s website" />
-            </div>
-
-            <div class="input">
-              <label for=""><i class="ri-whatsapp-line"></i></label>
-              <input type="no" placeholder="  Phone No." />
+            <div class="double-input">           
+              <div class="input">
+                <label for=""><i class="ri-community-line"></i></label>
+                <input type="text" placeholder=" First Name" id="first-name" />
+              </div>
+  
+              <div class="input">
+                <label for=""><i class="ri-global-line"></i></label>
+                <input type="text" placeholder="Last Name" id="last-name"/>
+              </div>
             </div>
 
             <div class="input">
               <label for=""><i class="ri-at-line"></i></label>
-              <input type="text" placeholder=" Email address" />
+              <input type="text" placeholder=" Email address" id="email-address"/>
             </div>
 
             <div class="input">
+              <label for=""><i class="ri-whatsapp-line"></i></label>
+              <input type="no" placeholder="  Phone No." id="phone-number" />
+            </div>
+
+
+            <!-- <div class="input">
               <label for=""><i class="ph ph-factory"></i></label>
               <input type="text" placeholder="Industry" />
+            </div> -->
+
+            <div class="double-input">
+              <div class="input">
+                <label for=""><i class="ph ph-flag"></i></label>
+                <input type="text" placeholder="State" id="state"/>
+              </div>
+  
+              <div class="input">
+                <label for=""><i class="ri-map-pin-line"></i></label>
+                <input type="text" placeholder="city" id="city"/>
+              </div>
             </div>
 
-            <div class="input">
-              <label for=""><i class="ph ph-flag"></i></label>
-              <input type="text" placeholder="Country" />
-            </div>
-
-            <div class="input">
-              <label for=""><i class="ri-map-pin-line"></i></label>
-              <input type="text" placeholder=" Address" />
-            </div>
-
-            <div class="input">
-              <label for=""><i class="ph ph-lock"></i></label>
-              <input type="password" placeholder="password" />
-            </div>
-            <div class="input">
-              <label for=""><i class="ph ph-lock"></i></label>
-              <input type="password" placeholder="Confirm password" />
+            <div class="double-input">
+              <div class="input">
+                <label for=""><i class="ph ph-lock"></i></label>
+                <input type="password" placeholder="password" id="password"/>
+              </div>
+              <div class="input">
+                <label for=""><i class="ph ph-lock"></i></label>
+                <input type="password" placeholder="Confirm password" id="confirm-password"/>
+              </div>
             </div>
           </div>
 
-          <button class="signupbtn">
+          <button class="signupbtn" id="signup-btn">
             <span class="yellow"> Sign </span>Up
           </button>
 
@@ -212,5 +219,6 @@
         </aside>
       </div>
     </footer>
+    <script src="js/signup.js"></script>
   </body>
 </html>

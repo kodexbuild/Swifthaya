@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/company_profile_edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.2.0/remixicon.css">
+</head>
+<body>
+
+    <div class="edit-profile-container">
+        <h2>Edit Profile</h2>
+
+        <div class="profile-upload">
+            <div class="image-placeholder">
+                <span>Image</span>
+            </div>
+            <label class="upload-btn">
+                <i class="ri-upload-cloud-line"></i> Upload Company logo
+                <input type="file" hidden>
+            </label>
+        </div>
+
+        <form>
+            <section class="personal-details">
+                <h3>Personal details</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" value="Chinenye Nwafor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" value="+234 903 740 9563">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" value="chinenyenwafor@gmail.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" value="Anambra">
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" value="Awka">
+                    </div>
+                </div>
+            </section>
+
+            <section class="company-details">
+                <h3>Company details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company's Name</label>
+                        <input type="text" value="Sologen Partners">
+                    </div>
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <select>
+                            <option>Technology / IT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company Size</label>
+                        <select>
+                            <option>1 - 10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Website URL</label>
+                        <input type="text" value="Sologen Partners.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" value="sologenpartner@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" value="+234 903 740 9563">
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <h3>About</h3>
+                <textarea rows="3">We are a fast-growing tech company at the forefront of cutting-edge solutions, dedicated to revolutionizing the industry with innovation and excellence...</textarea>
+            </section>
+
+            <section class="social-links">
+                <h3>Social Links <span class="add-link"><i class="ri-add-line"></i> Add</span></h3>
+                <div class="form-group social-input">
+                    <i class="ri-linkedin-box-line"></i>
+                    <input type="text" placeholder="LinkedIn URL">
+                </div>
+                <div class="form-group social-input">
+                    <i class="ri-instagram-line"></i>
+                    <input type="text" placeholder="Instagram URL">
+                </div>
+                <div class="form-group social-input">
+                    <i class="ri-twitter-line"></i>
+                    <input type="text" placeholder="Twitter URL">
+                </div>
+                <div class="form-group social-input">
+                    <i class="ri-github-line"></i>
+                    <input type="text" placeholder="GitHub URL">
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
