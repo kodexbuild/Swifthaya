@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script defer src="./js/signup.js"></script>
+  
   </head>
   <body>
     <header class="header">
@@ -85,32 +85,32 @@
 
             <div class="input">
               <label for=""><i class="ri-map-pin-line"></i></label>
-              <input type="text" placeholder="location" 
-              id="location"
+              <input type="text" placeholder="city" 
+              id="city"
               />
             </div>
 
             <div class="input">
-              <label for=""><i class="ri-user-fill"></i></label>
-              <input type="text" placeholder="Usertype" 
-              id="usertype"
+              <label for=""><i class="ri-map-pin-line"></i></label>
+              <input type="text" placeholder="state" 
+              id="state"
               />
             </div>
 
-
+      
             <div class="input">
               <label for=""><i class="ri-whatsapp-line"></i></label>
-              <input type="no" placeholder="  Phone No." id="phone" />
+              <input type="tel" placeholder="  Phone No." id="phone" />
             </div>
 
             <div class="input">
               <div class="password small">
                 <label for=""><i class="ph ph-lock"></i></label>
-                <input type="password" placeholder="password" class="password" />
+                <input type="password" placeholder="password" id="password"  name="password" class="password" />
               </div>
               <div class="password small">
                 <label for=""><i class="ph ph-lock"></i></label>
-                <input type="password" placeholder="Confirm password" class="password"/>
+                <input type="password" placeholder="Confirm password" id="password_confirmation"  name="password" class="password"/>
               </div>
             </div>
           </div>
@@ -216,5 +216,6 @@
         </aside>
       </div>
     </footer>
+    <script defer src="./Users/Talent/js/signup.js"></script>
   </body>
 </html>

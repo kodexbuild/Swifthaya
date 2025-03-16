@@ -1,55 +1,80 @@
-const signupForm = document.getElementById('signupForm');
 
-signupForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent default form submission
+async function signup() {
+  const signupForm = document.getElementById('signupForm');
 
-    // Define nested data objects
-  const firstname = document.getElementById('firstname').value;
-  const lastname = document.getElementById('lastname').value;
-  const email = document.getElementById('email').value;
-  const password = document.querySelector('.password').value;
-  const phone = document.getElementById('phone').value;
-  // const industry = document.getElementById('industry').value;
+  signupForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
 
+      const firstname = document.getElementById('firstname').value;
+      const lastname = document.getElementById('lastname').value;
+      const email = document.getElementById('email').value;
+      const city = document.getElementById('city').value;
+      const state = document.getElementById('state').value;
+      const phone = document.getElementById('phone').value;
+      const password = document.getElementById('password').value;
+      const password_confirmation = document.getElementById('password_confirmation').value;
 
-  const formData =  new FormData();
-  formData.append('firstname', firstname);
-  formData.append('lastname', lastname);
-  formData.append('email', email);
-  formData.append('password', password);
+      const userData = {
+          first_name: firstname,
+          last_name: lastname,
+          email: email,
+          password: password,
+          phone_number: phone,
+          city: city,
+          state: state,
+          password_confirmation: password_confirmation
+      };
 
-  //{
-  //   firstname: firstname,
-  //   lastname:lastname,
-  //   email: email,
-  //   password: password
-  // };
+      try {
+          const response = await fetch('https://swifthaya.kodexng.com/api/v1/register_talent', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  "Accept" : 'application/json'
+              },
+              body: JSON.stringify(userData)
+          });
 
+          
+          const responseText = await response.text; // Get response as text
+          console.log('Response text:', responseText); // Log the response
 
-  fetch('https://swifthaya.kodexng.com/api/v1/register', {
-    method: 'POST',
-      // mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  .then(response => {
-    if (response.ok) {
-      console.log(response)
-      // return response.json();
-    } else {
-      throw new Error('Network response was not ok');
-    }
-  })
-  .then(data => {
-    // Handle successful signup
-    console.log('Signup successful:', data);
-    // Redirect to a success page or display a success message
-  })
-  .catch(error => {
-    // Handle signup errors
-    console.error('Signup error:', error);
-    // Display an error message to the user
+          if (response.ok) {
+              // Signup successful
+              const contentType = response.headers.get('Content-Type');
+              console.log(contentType)
+              try {
+                  const data = await response.json();
+                  console.log('Signup successful:', data);
+                  // Handle success (e.g., redirect, show message)
+                  window.location.href = '../../login.html';
+              } catch (jsonError) {
+                  
+                  console.log("Signup successful, but non-json response:", jsonError);
+              }
+
+          } else {
+              // Signup error
+              try{
+                  const errorData = await response.json();
+                  console.error('Signup error:', errorData);
+                  //handle error
+              } catch (jsonError){
+                 
+                  console.error('Signup error:', jsonError);
+                  //handle error
+              }
+
+          }
+      }
+
+      
+      // ////
+      catch (error) {
+          console.error('Fetch error:', error);
+          // Handle fetch error
+      }
   });
-});
+}
+
+signup();
