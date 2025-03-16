@@ -14,11 +14,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   navs.forEach((nav) => {
-    nav.addEventListener("click", (e) => {
-      navs.forEach((nav) => nav.classList.toggle("active"));
-      // e.target.classList.add("active");
+    nav.addEventListener("click", () => {
+      // Remove active class from all nav items
+      navs.forEach((item) => item.classList.remove("active"));
+  
+      // Add active class to the clicked nav item
+      nav.classList.add("active");
     });
   });
+
+
+  const loadHtml = async (file) => {
+
+    try {
+      const response = await fetch(file);
+  
+      if (!response.ok) {
+        throw new Error("network response not ok");
+      }
+      let html = await response.text();
+  
+      // html = ""; // Or html = "";
+      content.innerHTML = html;
+      console.log(html);
+      html = "";
+    } catch {
+      content.innerHTML = `<h1> error loading content</h1>`;
+    }
+  };
+
+  const initialFile = "./dashboard_profile.html";
+  loadHtml(initialFile);
 
   links.forEach((link) => {
     link.addEventListener("click", async (event) => {
@@ -26,22 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       const file = link.getAttribute("data-file");
       console.log(file);
-
-      try {
-        const response = await fetch(file);
-
-        if (!response.ok) {
-          throw new Error("network response not ok");
-        }
-        let html = await response.text();
-
-        // html = ""; // Or html = "";
-        content.innerHTML = html;
-        console.log(html);
-        html = "";
-      } catch {
-        content.innerHTML = `<h1> error loading content</h1>`;
-      }
+      loadHtml(file)
     });
   });
 });

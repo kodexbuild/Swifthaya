@@ -65,31 +65,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   // a links
   links.forEach((link) => {
+    link.addEventListener("click", async (event) => {
+     event.preventDefault();
+      console.log(link);
+
     const file = link.getAttribute("data-file");
     console.log(file);
-    link.addEventListener("click", async (event) => {
-      console.log(link);
       
-      dashboard.classList.toggle('show')
-      event.preventDefault();
       // Update the CSS link based on the fetched HTML content
       const styleLink = document.getElementById("styleLink");
       // styleLink.href = "styles-" + file.replace(".html", ".css");
 
-      try {
+      if (!file) return;
+  
+    try {
         const response = await fetch(file);
-        if (!response.ok) {
-          throw new Error("network response not ok");
-        }
-
-        html = await response.text();
-
-        content.innerHTML = html;
-        // console.log(html);
-      } catch {
-        content.innerHTML = `<h1> error loading content</h1>`;
-      }
-    });
+        if (!response.ok) 
+            throw new Error("network response not ok");
+          
+    
+          const html = await response.text();
+    
+          content.innerHTML = html;
+            loadScripts(html);
+          // console.log(html);
+        } catch {
+            content.innerHTML = `<h1> error loading content</h1>`;
+          }
+        });
+          dashboard.classList.toggle('show')
   });
 
   function loadScripts(dummyscript) {
@@ -143,5 +147,4 @@ document.addEventListener("DOMContentLoaded", () => {
  
 });
 // dashboard reviews js
-
 
