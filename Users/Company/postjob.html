@@ -8,54 +8,58 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../Css/postjob.css" />
+    <link rel="stylesheet" href="css/postjob.css" />
   </head>
   <body>
     <div class="box">
       <header>
-        <h1>Job Details</h1>
+        <h1>My Jobs</h1>
       </header>
       <div class="top">
         <div class="fields">
           <div class="field">
             <label for="">Job title</label>
             <div class="input">
-              <input type="text" placeholder="select" />
+              <input type="text" placeholder="select" id="job-title"/>
             </div>
           </div>
           <!--  -->
           <div class="field">
-            <label for="">Industry</label>
-            <div class="input">
-              <input type="text" placeholder="select" />
-            </div>
-          </div>
-          <!--  -->
-          <div class="field">
-            <label for="">Experience Length</label>
-            <div class="input">
-              <input type="text" placeholder="select" />
-            </div>
+            <label for="">Experience Level</label>
+            <select name="xpsLevel" id="" class="input">
+              <option value=""></option>
+              <option value="senior">senior</option>
+            </select>
           </div>
           <!--  -->
           <div class="field">
             <label for="">Location</label>
             <div class="input">
-              <input type="text" placeholder="select" />
+              <input type="text" placeholder="select" id="location"/>
             </div>
           </div>
           <!--  -->
           <div class="field">
-            <label for="">Salary currency</label>
-            <div class="input">
-              <input type="text" placeholder="select" />
-            </div>
+            <label for="">Employment Type</label>
+            <select name="employment-type" id="" class="input">
+              <option value=""></option>
+              <option value="full_time">full_time</option>
+            </select>
           </div>
           <!--  -->
           <div class="field">
-            <label for="">Monthly Salary(Gross)</label>
+            <label for="">Salary Period</label>
+            <select name="salary-period" id="" class="input">
+              <option value=""></option>
+              <option value="monthly">Monthly</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </div>
+          <!--  -->
+          <div class="field">
+            <label for="">Salary</label>
             <div class="input">
-              <input type="text" placeholder="select" />
+              <input type="text" placeholder="select" id="salary"/>
             </div>
           </div>
           <!--  -->
@@ -63,40 +67,31 @@
       </div>
       <div class="mid">
         <div class="role">
-          <label for="">Job Role</label>
-          <input type="text" />
+          <label for="">Job Summary</label>
+          <textarea name="" id="job-summary" cols="30" rows="10"></textarea>
         </div>
-      </div>
-      <div class="bottom">
-        <div class="caption">
-          <h1>job Description/ Requirements</h1>
+        <!--  -->
+        <div class="role">
+          <label for="">Key Responsibilities</label>
+          <textarea name="" id="responsibilities" cols="30" rows="10"></textarea>
         </div>
-        <div class="container">
-          <div class="content">
-            <p>Job summary</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              sapiente nisi est dolore enim distinctio facilis minus
-              voluptatibus. Nesciunt, sit!#
-            </p>
-          </div>
+        <!--  -->
+        <div class="role">
+          <label for="">Requirements</label>
+          <textarea name="" id="requirements" cols="30" rows="10"></textarea>
         </div>
-        <div class="container">
-          <div class="content">
-            <p>Job Description/requirements</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              sapiente nisi est dolore enim distinctio facilis minus
-              voluptatibus. Nesciunt, sit!#
-            </p>
-          </div>
+        <!--  -->
+        <div class="role">
+          <label for="">Preferred Qualifications</label>
+          <textarea name="" id="qualifications" cols="30" rows="10"></textarea>
         </div>
       </div>
       <!--  -->
       <footer>
-        <button class="btn">Preview</button>
-        <button class="btn">Post job</button>
+        <button type="submit" id="preview-btn" class="btn">Preview</button>
+        <button  id="btn-post" class="btn">Post job</button>
       </footer>
     </div>
+    <script src="js/postjob.js" async defer></script>
   </body>
 </html>

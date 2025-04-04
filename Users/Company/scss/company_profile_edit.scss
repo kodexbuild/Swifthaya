@@ -14,7 +14,7 @@ body {
 
 .edit-profile-container {
   width: 90%;
-  max-width: 800px;
+  max-width: 100%;
   margin: 30px auto;
   background: white;
   padding: 25px;
@@ -56,6 +56,18 @@ body {
     i {
       font-size: 18px;
     }
+  }
+  .imgBtn{
+    background: $primary-color;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
   }
 }
 

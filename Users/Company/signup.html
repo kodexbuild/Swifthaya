@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
@@ -117,11 +118,49 @@
             </div>
           </div>
 
+          <section class="inputs2" >
+            <div class="input">
+              <label for=""><i class="ri-community-line"></i></label>
+              <input type="text" placeholder="Company Name" id="company-name"/>
+            </div>
+            <div class="input">
+              <label for=""><i class="ri-at-line"></i></label>
+              <input type="text" placeholder="Company email" id="company-email"/>
+            </div>
+            <div class="input">
+              <label for=""><i class="ri-whatsapp-line"></i></label>
+              <input type="number" placeholder="Company Phone" id="company-phone"/>
+            </div>
+            <div class="input">
+              <label for=""><i class="ri-global-line"></i></label>
+              <input type="text" placeholder="Company Industry" id="company-industry"/>
+            </div>
+            <div class="input">
+              <label for=""><i class="ri-global-line"></i></label>
+              <input type="text" placeholder="Company website" id="company-website"/>
+            </div>
+            <div class="double-input">
+              <div class="input">
+                <label for=""><i class="ph ph-flag"></i></label>
+                <input type="text" placeholder="Company State" id="company-state"/>
+              </div>
+              <div class="input">
+                <label for=""><i class="ri-map-pin-line"></i></label>
+                <input type="text" placeholder="Company city" id="company-city"/>
+              </div>
+            </div>
+          </section>
+
+          <div class="checkbox">
+            <input type="checkbox" id="company-checkbox">
+            <label for="" >I'm signing up for a company</label>
+          </div>
+
           <button class="signupbtn" id="signup-btn">
             <span class="yellow"> Sign </span>Up
           </button>
 
-          <p class="login">Already have an account? <a href=""> Log In</a></p>
+          <p class="login">Already have an account? <a href="../../login.html"> Log In</a></p>
           <div class="alternative">
             <p>or <span class="yellow">sign</span> up with</p>
           </div>
@@ -219,6 +258,7 @@
         </aside>
       </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="js/signup.js"></script>
   </body>
 </html>

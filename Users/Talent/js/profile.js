@@ -8,7 +8,7 @@ function loadPage(file) {
        .then(html => {
            content.innerHTML = html;
            loadScripts(html); // Ensure scripts in loaded page execute
-           attachEditProfileListener(); // Re-attach event listeners after loading
+           editProfile(); // Re-attach event listeners after loading
        })
        .catch(error => console.error("Error loading page:", error));
 }
@@ -33,7 +33,7 @@ const userProfile = async () => {
    const profileData = await response.json(); 
    console.log(profileData);
 }
-register_company
+// register_company
 userProfile();
 
 

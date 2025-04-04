@@ -35,7 +35,8 @@ body {
           justify-content: space-between;
   padding: 10px;
   padding-inline: 100px;
-  border-bottom: 1px solid grey;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 .header .left {
   display: -webkit-box;

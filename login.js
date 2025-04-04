@@ -15,10 +15,33 @@ const login = async () => {
       });
 
       const loginData = await response.json();
-
+      console.log(loginData.token)
+      // console.log(loginData.data.id)
       if (response.ok){
          console.log("login successful", loginData);
          document.querySelector("form").reset();
+         localStorage.setItem("token", loginData.token);
+         localStorage.setItem("userId", loginData.data.id);
+         localStorage.setItem("userType", loginData.data.user_type) ;
+
+         Toastify({
+            text: "Login Successful",
+            duration: 1000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "right", 
+            stopOnFocus: true,
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function(){}
+         }).showToast();
+         setTimeout(() => {
+            window.location.href = "Users/Company/dashboard.html";
+         }, 2000);
+         // window.location.href = "Users/Company/dashboard.html";
       } else {
          
          console.error("login Failed:", loginData);

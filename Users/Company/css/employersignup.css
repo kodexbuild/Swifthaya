@@ -13,11 +13,11 @@ body {
 }
 
 .header {
-  border-bottom: 1px solid grey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 90px;
   gap: 3rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -169,7 +169,7 @@ body {
 }
 .container .heroimg {
   width: 40%;
-  background: url(../../../Users/Individual/assets/people.jpeg);
+  background: url(./../assets/people.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -219,7 +219,10 @@ body {
 .container .form form .caption * {
   text-align: center;
 }
-.container .form form .inputs {
+.container .form form .inputs2 {
+  display: none;
+}
+.container .form form .inputs, .container .form form .inputs2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,10 +234,10 @@ body {
   gap: 14px;
   row-gap: 20px;
 }
-.container .form form .inputs label {
+.container .form form .inputs label, .container .form form .inputs2 label {
   margin-left: 15px;
 }
-.container .form form .inputs .double-input {
+.container .form form .inputs .double-input, .container .form form .inputs2 .double-input {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr;
@@ -242,7 +245,7 @@ body {
   width: 100%;
   gap: 20px;
 }
-.container .form form .inputs .input {
+.container .form form .inputs .input, .container .form form .inputs2 .input {
   width: 100%;
   overflow: hidden;
   border: 1px solid grey;
@@ -255,12 +258,26 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.container .form form .inputs .input input {
+.container .form form .inputs .input input, .container .form form .inputs2 .input input {
   border: none;
   outline: none;
   width: 100%;
   padding: 10px;
   text-indent: 2px;
+}
+.container .form form .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 2rem;
+  width: 100%;
+  gap: 10px;
 }
 .container .form form .signupbtn {
   width: 100%;
@@ -626,7 +643,7 @@ footer .end .icons span {
     display: block;
   }
   .container .form form .inputs {
-    -ms-grid-columns: (1fr)[1];
+    /* -ms-grid-columns: (1fr)[1]; */
     grid-template-columns: repeat(1, 1fr);
   }
   .container .form form .caption {

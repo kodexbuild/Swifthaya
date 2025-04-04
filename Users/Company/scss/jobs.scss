@@ -1,0 +1,211 @@
+@import "../../../Scss/variable";
+// Variables
+// $green: #6cc24a;
+$secondary-color: #f5f5f5;
+$border-color: #ddd;
+$text-color: #333;
+$open-status: #daf5d8;
+$closed-status: #fde2e2;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    // padding: 20px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: white;
+}
+
+
+.title-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .section-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .add-job-btn {
+        background: $green;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+}
+
+// Header
+
+.total-jobs {
+    width:fit-content;
+    display: flex;
+    justify-items:first baseline;
+    align-items: center;
+    padding: 10px;
+    margin-top: 2.5rem;
+    border-radius: 5px;
+    border: 1px solid $border-color;
+
+    i {
+        font-size: 24px;
+        margin-right: 10px;
+        color: $green;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+
+// Filters
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2.5rem;
+
+    .filter-btn, .reset-btn {
+        background: $green;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    select {
+        padding: 8px;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+    }
+}
+
+// Job Cards
+.jobs-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .job-card {
+        background: white;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        padding: 10px;
+        // display: flex;
+        // flex-direction: column;
+        text-align: right;
+        .status {
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 500;
+            // margin: 10px;
+        }
+
+        .job-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+        }
+
+        h4 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .applied-count {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .view-applications {
+            display: inline-block;
+            margin-top: 10px;
+            color: $green;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+
+    .open {
+        .status {
+            background: $open-status;
+            color: green;
+        }
+    }
+
+    hr{
+        margin-top: 10px;
+    }
+
+    .closed {
+        .status {
+            background: $closed-status;
+            color: red;
+        }
+    }
+}
+
+// Pagination
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    .page-numbers {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .page {
+            padding: 5px 10px;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            text-decoration: none;
+            color: $text-color;
+
+            &.active {
+                background: $green;
+                color: white;
+            }
+        }
+
+        .next {
+            text-decoration: none;
+            font-size: 18px;
+            color: $text-color;
+        }
+    }
+}

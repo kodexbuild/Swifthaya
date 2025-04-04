@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/dashboard.css" />
   </head>
   <body>
@@ -49,20 +50,20 @@
             </li>
             <li class="li">
               <i class="ri-search-line"></i
-              ><a href="" data-file="find_talents.html" class="link"
+              ><a href="" data-file="applicants_page.html" class="link"
                 >Find talents</a
               >
             </li>
             <li class="li">
               <i class="ri-file-add-line"></i
-              ><a href="" data-file="postjob.html" class="link">My jobs</a>
+              ><a href="" data-file="jobs.html" class="link">My jobs</a>
             </li>
-            <li class="li">
+            <!-- <li class="li">
               <i class="ri-sticky-note-line"></i
               ><a href="" class="link" data-file="applicants_page.html"
                 >Applicants</a
               >
-            </li>
+            </li> -->
             <li class="li">
               <i class="ri-chat-4-line"></i
               ><a href="" data-file="dashboard_message.html" class="link"
@@ -86,9 +87,9 @@
 
             <li class="li">
               <i class="ri-user-line"></i
-              ><a href="" data-file="company_employer_profile.html" class="link">Profile</a>
+              ><a href="" data-file="individual_employer_profile.html" class="link">Profile</a>
             </li>
-            <li class="li">
+            <li class="li" id="logout">
               <i class="ri-logout-box-line"></i
               ><a href="" class="link">Logout</a>
             </li>
@@ -99,7 +100,8 @@
     </div>
 
     
-    <script src="./js/dashboard.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </body>
 </html>

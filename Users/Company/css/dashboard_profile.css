@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box {
+  padding: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.4rem;
+}
+.box h1 {
+  font-size: 1.7dvw;
+}
+.box header {
+  padding: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+}
+.box header .btn {
+  padding: 10px;
+  padding-inline: 20px;
+  color: #81be00;
+  background-color: white;
+  border: 1px solid #81be00;
+  border-radius: 30px;
+}
+.box .cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+.box .cont header h2 {
+  color: #81be00;
+}
+.box .cont .infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.box .cont .infobox .info {
+  width: 30.303030303%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  text-transform: capitalize;
+  gap: 1rem;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding-block: 20px;
+  background-color: white;
+}
+.box .cont .infobox .info h1 {
+  font-size: 1.7dvw;
+}
+.box .cont .infobox .info h2 {
+  font-size: 1.7dvw;
+}
+.box .cont .infobox .info * {
+  padding: 10px;
+}
+.box .cont .notifications {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+.box .cont .notifications .notification header {
+  width: 100%;
+  padding: 10px;
+}
+.box .cont .notifications .notification header button {
+  color: #81be00;
+  font-weight: 600;
+  background: transparent;
+  text-transform: capitalize;
+  border: none;
+  font-size: 1.3dvw;
+  padding: 10px;
+  padding-inline: 20px;
+  outline: none;
+}
+.box .cont .notifications .notification .wallet {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  background: #81be00;
+  color: white;
+  padding: 20px;
+  padding-block: 40px;
+  border-radius: 10px;
+}
+.box .cont .notifications .notification .wallet h1,
+.box .cont .notifications .notification .wallet h2 {
+  font-size: 1dvw;
+  width: 100%;
+  text-transform: capitalize;
+  padding: 6px;
+}
+.box .cont .notifications .notification .wallet button {
+  background: white;
+  color: black;
+  border: none;
+  outline: none;
+  max-width: 50%;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 1.1dvw;
+  padding-inline: 10px;
+  font-weight: 600;
+}
+.box .cont .notifications .notification .messages {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #d1cece;
+  padding: 20px;
+  padding-block: 30px;
+  border-radius: 10px;
+}
+.box .cont .notifications .notification .messages .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.box .cont .notifications .notification .messages .row .left {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+.box .cont .notifications .notification .messages .row .left .img {
+  width: 3dvw;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background: black;
+}
+.box .cont .notifications .notification .messages .row .left .txt {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.box .cont .notifications .notification .messages .row .left .txt h3 {
+  font-size: 1rem;
+}
+.box .cont .notifications .notification .messages .row .left .txt p {
+  font-size: 1rem;
+}
+.box .cont .notifications .notification .messages .row .right {
+  width: 10%;
+}
+.box .cont .projectposts {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.box .cont .projectposts .project-body-cta {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.box .cont .projectposts .project-body-cta .row {
+  padding: 10px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.box .cont .projectposts .project-body-cta .row .left {
+  width: 70%;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.4dvw;
+}
+.box .cont .projectposts .project-body-cta .row .left p {
+  opacity: 0.6;
+}
+.box .cont .projectposts .project-body-cta .row .right {
+  width: 30%;
+}
+.box .cont .projectposts .project-body-cta .row .right button {
+  background: #81be00;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 1.2dvw;
+  outline: none;
+  font-weight: 600;
+  color: white;
+  width: 70%;
+}

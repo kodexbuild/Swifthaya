@@ -35,13 +35,14 @@
         font-weight: 600;
       }
     }
-    .body {
+    #body {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       justify-items: center;
       row-gap: 20px;
       .application {
         width: 97%;
+        background-color: white;
         box-shadow: $box-shadow;
         .top {
           padding-top: 20px;

@@ -43,7 +43,8 @@ body {
           justify-content: space-between;
   padding: 10px;
   padding-inline: 100px;
-  border-bottom: 1px solid grey;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 }
 .header .left {
@@ -107,13 +108,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 1rem;
+  margin-top: 90px;
+  background-color: #f5f5f5;
 }
 .body .sidebar {
   width: 25%;
-  margin-top: 4.5rem;
-  position: sticky;
-  padding-block: 20px;
-  padding-left: 20px;
+  position: fixed;
+  left: 0;
 }
 .body .sidebar ul {
   list-style: none;
@@ -125,6 +127,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  background-color: white;
 }
 .body .sidebar ul li {
   display: -webkit-box;
@@ -157,9 +160,9 @@ body {
   color: white;
 }
 .body .activepage {
-  margin-top: 4.5rem;
   width: 90%;
   margin-inline: auto;
+  margin-left: 25%;
 }
 
 .dashboardfooter {

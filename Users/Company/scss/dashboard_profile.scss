@@ -12,10 +12,12 @@
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  // background-color: white;
   h1 {
     font-size: 1.7dvw;
   }
   header {
+    // background-color: white;
     padding: 10px;
     width: 100%;
     display: flex;
@@ -27,11 +29,12 @@
       padding: 10px;
       padding-inline: 20px;
       color: $green;
+      background-color: white;
       border: 1px solid $green;
       border-radius: 30px;
     }
   }
-  .body {
+  .cont {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -57,6 +60,7 @@
         gap: 1rem;
         box-shadow: $box-shadow;
         padding-block: 20px;
+        background-color: white;
 
         h1 {
           font-size: 1.7dvw;
@@ -70,12 +74,15 @@
       }
     }
     .notifications {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
       justify-content: space-between;
       align-items: center;
+      margin-top: 2rem;
 
       .notification {
-        width: calc(100% / 2.1);
+        // width: calc(100% / 2.1);
 
         header {
           width: 100%;
@@ -133,42 +140,37 @@
           padding-block: 30px;
           border-radius: 10px;
 
-          .body {
+          .row {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
-
-            .row {
+            align-items: center;
+            justify-content: space-between;
+            .left {
+              width: 80%;
               display: flex;
               align-items: center;
-              justify-content: space-between;
-              .left {
-                width: 80%;
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                .img {
-                  width: 5dvw;
-                  aspect-ratio: 1;
-                  border-radius: 100%;
-                  background: black;
-                }
-                .txt {
-                  font-weight: 600;
-                  text-transform: capitalize;
-                  h3 {
-                    font-size: 1.2dvw;
-                  }
-                  p {
-                    font-size: 1.1dvw;
-                  }
-                }
+              gap: 1rem;
+              .img {
+                width: 3dvw;
+                aspect-ratio: 1;
+                border-radius: 100%;
+                background: black;
               }
-              .right {
-                width: 10%;
+              .txt {
+                font-weight: 400;
+                text-transform: capitalize;
+                h3 {
+                  font-size: 1rem;
+                }
+                p {
+                  font-size: 1rem;
+                }
               }
             }
+            .right {
+              width: 10%;
+            }
           }
+
         }
       }
     }
@@ -178,7 +180,7 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      .body {
+      .project-body-cta {
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -186,6 +188,7 @@
         .row {
           padding: 10px;
           box-shadow: $box-shadow;
+          background-color: white;
           display: flex;
           align-items: center;
           justify-content: space-between;

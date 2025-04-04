@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/company_profile_edit.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.2.0/remixicon.css">
+</head>
+<body>
+
+    <div class="edit-profile-container">
+        <h2>Edit Profile</h2>
+
+        <div class="profile-upload">
+            <div class="image-placeholder">
+                <span>Image</span>
+            </div>
+            <label class="upload-btn">
+                <i class="ri-upload-cloud-line"></i> Upload Company logo
+                <input id="profile-image" type="file" hidden>
+            </label>
+            <button type="submit" class="imgBtn">UPLOAD IMAGE</button>
+        </div>
+
+        <form>
+            <section class="personal-details">
+                <h3>Personal details</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" id="state">
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" id=city>
+                    </div>
+                </div>
+            </section>
+
+            <section class="company-details">
+                <h3>Company details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company's Name</label>
+                        <input type="text" id="companyName">
+                    </div>
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <select name="industry">
+                            <option value=""></option>
+                            <option value="Technology/IT">Technology / IT</option>
+                            <option value="Agriculture">Agriculture</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company Size</label>
+                        <select name="company-size">
+                            <option value=""></option>
+                            <option value="1-10">1 - 10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Website URL</label>
+                        <input type="text" id="companyWebsite">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id=companyEmail>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="companyPhone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company State</label>
+                        <input type="text" id=companyState>
+                    </div>
+                    <div class="form-group">
+                        <label>Company City</label>
+                        <input type="text" id="companyCity">
+                    </div>
+                </div>
+            </section>
+
+            <section class="about">
+                <h3>About</h3>
+                <textarea rows="10" cols="100" id="aboutCompany"></textarea>
+            </section>
+
+            <section class="social-links">
+                <h3>Socil Links <span class="add-link"><i class="ri-add-line"></i> Add</span></h3>
+                <div class="form-group social-input">
+                    <i class="ri-linkedin-box-line"></i>
+                    <input type="text" id="linkedin" placeholder="LinkedIn URL">
+                </div>
+                <div class="form-group social-input">
+                    <i class="ri-instagram-line"></i>
+                    <input type="text" id="instagram" placeholder="Instagram URL">
+                </div>
+                <div class="form-group social-input">
+                    <i class="ri-twitter-line"></i>
+                    <input type="text" id="twitter" placeholder="Twitter URL">
+                </div>
+                <div class="form-group social-input">
+                    <i class="ri-github-line"></i>
+                    <input type="text" id="github" placeholder="GitHub URL">
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/edit_profile.js"></script>
+</body>
+</html>

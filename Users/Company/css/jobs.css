@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 25px;
+  background-color: white;
+}
+
+.title-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.title-head .section-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.title-head .edit-btn {
+  background: #81be00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.total-jobs {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: first baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin-top: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.total-jobs i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #81be00;
+}
+.total-jobs p {
+  margin: 0;
+  font-size: 14px;
+}
+.total-jobs h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: 2.5rem;
+}
+.filters .filter-btn, .filters .reset-btn {
+  background: #81be00;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filters select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.jobs-container {
+  margin-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.jobs-container .job-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.jobs-container .job-card .status {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-weight: 500;
+  align-self: flex-end;
+}
+.jobs-container .job-card .job-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  /* justify-content: space-between; */
+  position: relative;
+  /* z-index: 0; */
+}
+.jobs-container .job-card .job-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.jobs-container .job-card .job-header .job-action{
+  display: flex;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+.jobs-container .job-card .job-header .job-action .action-menu{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  width: 100px;
+  background-color: white;
+}
+.jobs-container .job-card .job-header .job-action .action-menu.show{
+  display: block;
+}
+.jobs-container .job-card .job-header i{
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.jobs-container .job-card h4 {
+  
+  font-size: 18px;
+}
+.jobs-container .job-card p {
+  font-size: 14px;
+  color: #666;
+}
+.jobs-container .job-card .job-footer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.jobs-container .job-card .applied-count {
+  font-size: 14px;
+  font-weight: 500;
+  display: grid;
+}
+.jobs-container .job-card .view-applications {
+  display: inline-block;
+  margin-top: 10px;
+  color: #81be00;
+  font-weight: 500;
+  text-decoration: none;
+}
+.jobs-container .open .status {
+  background: #daf5d8;
+  color: green;
+}
+.jobs-container hr {
+  margin-top: 10px;
+}
+.jobs-container .job-card .hr{
+  margin-top: 1rem;
+}
+.jobs-container .closed .status {
+  background: #fde2e2;
+  color: red;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+.pagination .page-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.pagination .page-numbers .page {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+.pagination .page-numbers .page.active {
+  background: #81be00;
+  color: white;
+}
+.pagination .page-numbers .next {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}

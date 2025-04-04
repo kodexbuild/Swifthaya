@@ -23,7 +23,7 @@ body {
 
 .profile-header {
    display: flex;
-   align-items: start;
+   align-items: center;
    gap: 15px;
    border-bottom: 2px solid #ddd;
    padding-bottom: 15px;
@@ -42,7 +42,7 @@ body {
       flex: 1;
    }
 
-   .edit-profile {
+   #edit-profile-btn {
       background: $primary-color;
       color: white;
       border: none;
@@ -83,17 +83,17 @@ section {
    }
 }
 
-.details-card {
+.details-card, .details-card2 {
    width: 98%;
    margin-inline: auto;
    background: white;
    border-radius: 5px;
    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-   padding: 1.5rem;
+   padding: 2.5rem 2rem;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   gap: 1rem;
-   row-gap: 2rem;
+   gap: 10px;
+   row-gap: 3rem;
    justify-content: space-between;
    .detail {
       font-size: 14px;
@@ -106,7 +106,11 @@ section {
       span {
          background: #eaf5d8;
          padding: 5px 10px;
-         border-radius: 20px;
+         border-radius: 10px;
+         a{
+            color: $text-color;
+            text-decoration: none;
+         }
       }
    }
 }

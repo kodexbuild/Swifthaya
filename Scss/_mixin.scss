@@ -10,9 +10,9 @@
   border: 2px solid;
 }
 @mixin header {
-  border-bottom: 1px solid grey;
   display: flex;
   width: 100%;
+  height: 90px;
   gap: 3rem;
   justify-content: center;
   align-items: center;
@@ -142,7 +142,7 @@
   justify-content: space-between;
   padding: 10px;
   padding-inline: 100px;
-  border-bottom: 1px solid grey;
+  box-shadow: $box-shadow;
   .left {
     display: flex;
     align-items: center;
