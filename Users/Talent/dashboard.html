@@ -8,7 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../Css/talentdashboard.css" />
+    <link rel="stylesheet" href="./css/talentdashboard.css" />
   </head>
   <body>
     <header class="header">
@@ -35,8 +35,7 @@
           <label for="user">Bandalton</label>
           <select id="find-jobs" name="find-jobs">
             <option value="" disabled selected>peter okoye</option>
-            <!-- <option value="designer">Designer</option> 
-                        <option value="manager">Manager</option> -->
+            
           </select>
         </div>
       </div>
@@ -45,7 +44,7 @@
       <ul>
         <li class="active li">
           <i class="ri-dashboard-horizontal-line"></i
-          ><a href="" class="link" data-file="dashboardprofile.html"
+          ><a href="" class="link" data-file="talent.html"
             >Dashboard</a
           >
         </li>
@@ -55,10 +54,7 @@
             >Find job</a
           >
         </li>
-        <!-- <li class="li">
-          <i class="ri-file-add-line"></i
-          ><a href="" class="link">post projects</a>
-        </li> -->
+        
         <li class="li">
           <i class="ri-sticky-note-line"></i
           ><a href="" data-file="dashboard_jobstatus.html" class="link"
@@ -71,30 +67,16 @@
             >Messages</a
           >
         </li>
-        <!-- <li class="li">
-          <i class="ri-wallet-line"></i
-          ><a href="" data-file="dashboard_wallet.html" class="link"
-            >Wallet</a
-          >
-        </li> -->
-        <!-- <li class="li">
-          <i class="ri-star-line"></i
-          ><a href="" data-file="dashboard_reviews.html" class="link"
-            >Reviews</a
-          >
-        </li> -->
-        <!-- <li class="li">
-          <i class="ri-settings-2-line"></i
-          ><a href="" class="link">settings</a>
-        </li> -->
+       
+          
         <li class="li">
           <i class="ri-user-line"></i
-          ><a href="" data-file="talentprofile.html" class="link"
+          ><a href="" data-file="profile.html" class="link"
             >Profile</a
           >
         </li>
         <li class="li">
-          <i class="ri-logout-box-line"></i><a href="" class="link">Logout</a>
+          <i class="ri-logout-box-line"></i><a href="" class="link" id="logout">Logout</a>
         </li>
       </ul>
     </nav>
@@ -149,6 +131,7 @@
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
     </script> -->
+  
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </body>
 </html>

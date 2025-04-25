@@ -32,7 +32,7 @@ body {
 form {
   padding: 1.5rem;
   background-color: rgb(245, 245, 245);
-  box-shadow: 3px 3px 73px #629000;
+  box-shadow: 3px 3px 73px rgb(97.8363157895, 144.1, 0);
   border-radius: 0.5rem;
 }
 
@@ -143,4 +143,6 @@ form:nth-child(2n) {
   color-scheme: dark;
   background-color: black;
   color: white;
-}/*# sourceMappingURL=usertype.css.map */
+}
+
+/*# sourceMappingURL=usertype.css.map */

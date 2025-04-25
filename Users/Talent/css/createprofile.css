@@ -1,4 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 * {
   font-family: poppins;
 }
@@ -23,30 +32,55 @@ section {
 }
 
 .picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 10px;
+}
+.picture .inputwrapper.show {
+  display: block;
+  opacity: 1;
+}
+.picture .inputwrapper {
+  transition: opacity 2s ease, max-height 0.5s ease; /* Transition for 0.5 seconds */
+  display: none;
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+}
+.picture .inputwrapper .file-upload {
+  color: green;
+}
+.picture .inputwrapper input[type=file] {
+  opacity: 0.7;
+  font-family: poppins;
+}
+.picture .inputwrapper .profilePictureInput {
+  display: none;
 }
 .picture .imgwrap {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   background: rgb(173, 172, 172);
+  overflow: hidden;
+}
+.picture .imgwrap img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 .picture .right {
   font-size: 1.2rem;
   color: gray;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 5px;
+}
+.picture .right .uploadbtn {
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  background: transparent;
+  color: gray;
 }
 
 .info_box {
@@ -59,19 +93,52 @@ section {
   font-weight: 600;
   text-transform: capitalize;
 }
-.info h2 {
+.info label {
   opacity: 0.8;
   color: black;
   font-size: 1.2rem;
 }
-.info .text {
+.info .text, .info input {
   width: 100%;
   margin-top: 5px;
   padding: 4px;
   border: 1px solid grey;
   outline: none;
 }
-.info .text p {
+.info .text p, .info input p {
+  font-weight: 300;
+}
+
+.contact_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 1rem;
+  width: 90%;
+  padding: 10px;
+}
+
+.contact {
+  width: 100%;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.contact h2 {
+  opacity: 0.8;
+  color: black;
+  font-size: 1.2rem;
+}
+.contact .text {
+  width: 100%;
+  margin-top: 5px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid grey;
+  outline: none;
+}
+.contact .text p {
   font-weight: 300;
 }
 
@@ -80,12 +147,8 @@ section {
 }
 
 .socials .bottom .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 6px;
 }
 
@@ -93,7 +156,7 @@ section {
   font-size: 2rem;
 }
 
-.social p {
+.social input {
   text-transform: capitalize;
   width: 90%;
   font-weight: 600;
@@ -107,13 +170,8 @@ section {
 }
 
 .resume {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   /*   justify-content:center;
     align-items:center; */
 }
@@ -124,18 +182,12 @@ section {
 
 .resume .bottom {
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.bottom .icon > * {
+.bottom .container .text .file-label > * {
   font-size: 4rem;
   opacity: 0.7;
 }
@@ -145,20 +197,33 @@ section {
 }
 
 .bottom .container .text p span {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .bottom .container .text :nth-child(2) {
-  opacity: 0.3;
+  opacity: 0.5;
+}
+
+input#resumeUpload {
+  display: none;
+}
+
+.resumebtn {
+  border: none;
+  font-size: 1.2rem;
+  outline: none;
+  text-align: left;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.resumebtn p:first-of-type {
+  opacity: 0.6;
 }
 
 .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  justify-content: right;
   gap: 1.6rem;
 }
 
@@ -174,4 +239,11 @@ section {
 .btn :nth-child(2) {
   background: black;
   color: white;
+  transition: 0.3s ease-in-out;
 }
+.btn :nth-child(2):hover {
+  background: #81be00;
+  border: transparent;
+}
+
+/*# sourceMappingURL=createprofile.css.map */

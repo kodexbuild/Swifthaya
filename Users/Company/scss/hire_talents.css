@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.griid-container {
+  display: flex;
+  flex-direction: column;
+}
+.griid-container .header {
+  display: flex;
+  padding: 10px;
+  padding-inline: 50px;
+  padding-top: 30px;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.6);
+}
+.griid-container .header .left {
+  width: 50%;
+}
+.griid-container .header .left span {
+  font-size: 1.2rem;
+}
+.griid-container .header .left input {
+  width: 80%;
+  padding: 10px;
+  border: 0;
+  outline: none;
+}
+.griid-container .header .right {
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+}
+.griid-container .header .right .opt_ion {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 13.5px;
+  border-radius: 10px;
+  border: 1px solid #d6cfcf;
+}
+.griid-container .header .right .green {
+  background-color: #81be00;
+  color: white;
+  border: 0;
+  font-weight: 600;
+}
+.griid-container .griid .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 15px;
+}
+.griid-container .griid .row .column {
+  width: 50%;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.griid-container .griid .row .column .top {
+  display: flex;
+  padding: 8px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+.griid-container .griid .row .column .top aside {
+  display: flex;
+  gap: 15px;
+}
+.griid-container .griid .row .column .top aside .img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+}
+.griid-container .griid .row .column .top aside .text p {
+  padding: 10px;
+}
+.griid-container .griid .row .column .top aside .text p:last-child {
+  opacity: 0.4;
+}
+.griid-container .griid .row .column .top .icons {
+  display: flex;
+  align-items: first baseline;
+  gap: 1.2rem;
+}
+.griid-container .griid .row .column .top .icons span {
+  font-size: 1.6rem;
+}
+.griid-container .griid .row .column .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.griid-container .griid .row .column .bottom aside p:last-child {
+  opacity: 0.6;
+}
+.griid-container .griid .row .column .bottom .btn button {
+  background-color: #81be00;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 7px;
+  padding-inline: 40px;
+  font-size: 1rem;
+  background-color: #81be00;
+  color: white;
+}
+
+/*# sourceMappingURL=hire_talents.css.map */

@@ -4,8 +4,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -19,31 +18,20 @@ body {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 34;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
   padding-inline: 100px;
   border-bottom: 1px solid grey;
 }
 .header .left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 9px;
 }
 .header .left span {
@@ -60,30 +48,19 @@ body {
   outline: none;
 }
 .header .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .header .right .select {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .header .right .select select {
   color: grey;
   border: none;
 }
 .header .right .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 0.7rem;
   padding: 8px;
 }
@@ -96,11 +73,9 @@ body {
 
 .sidebar {
   position: fixed;
-  margin-top: 4.5rem;
+  margin-top: 5.5rem;
   width: 25%;
-  padding-block: 20px;
-  padding-left: 20px;
-  background-color: grey;
+  height: 70%;
 }
 .sidebar .sidebar.small {
   width: 13%;
@@ -109,30 +84,19 @@ body {
 .sidebar ul {
   width: 100%;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 100%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  flex-direction: column;
+  align-items: stretch;
   gap: 1rem;
   background-color: white;
 }
 .sidebar ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-block: 15px;
   padding-inline: 10px;
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 0.3s ease-in-out;
+  align-items: center;
   transition: all 0.3s ease-in-out;
   border: 1px solid transparent;
   gap: 10px;
@@ -158,7 +122,6 @@ body {
   display: none;
 }
 .sidebar ul li i.white {
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   color: white;
 }
@@ -169,8 +132,6 @@ body {
   color: white;
 }
 .sidebar ul .widdth {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .sidebar .active {
@@ -182,55 +143,37 @@ body {
 }
 
 .sidebar.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .Dbody {
   width: 100%;
-  padding-left: 400px;
-  padding-top: 4.5rem;
-  -ms-grid-column-align: right;
-      justify-self: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding-left: 340px;
+  padding-top: 5rem;
+  justify-self: right;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .Dbody .activepage {
-  padding-block: 15px;
+  padding-block: 1px;
   width: 100%;
 }
 
 @media (max-width: 768px) {
   .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: fixed;
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     z-index: 34;
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid grey;
   }
   .header .left {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     gap: 20px;
   }
   .header .left span {
@@ -247,19 +190,12 @@ body {
     display: none;
   }
   .header .right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .header .right .select {
     display: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .header .right .select * {
     display: none;
@@ -269,12 +205,8 @@ body {
     border: none;
   }
   .header .right .icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     gap: 0.7rem;
     padding: 8px;
   }
@@ -291,7 +223,6 @@ body {
     margin-bottom: -20px;
     width: 100%;
     height: 100vh;
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     inset: 0;
     opacity: 0;
@@ -299,21 +230,14 @@ body {
     z-index: 45;
   }
   .sidebar.show {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-left: 0;
     opacity: 1;
     margin-bottom: 0;
   }
   .Dbody {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 4.5rem;
     padding-left: 0;
     padding-block: 2px;
@@ -321,6 +245,9 @@ body {
   }
   .Dbody .activepage {
     width: 100%;
+    padding-top: 5rem;
     margin-left: 0;
   }
 }
+
+/*# sourceMappingURL=talentdashboard.css.map */

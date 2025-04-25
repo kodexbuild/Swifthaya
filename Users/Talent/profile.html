@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>talentprofile</title>
+   <link rel="stylesheet" href="./css/Editprofile.css">
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+     .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+           background-color: rgba(0, 0, 0, 0.3); 
+        }
+
+        .modal-content {
+           background-color: #888;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            display: none;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <section class="profile">
+      <div class="profile-header">
+          <img src="profile.jpg" alt="John Smith" class="profile-pic">
+          <div class="profile-info">
+              <h2>John Smith</h2>
+              <p class="role">Software Developer</p>
+              <span class="status">✅ Available for work</span>
+          </div>
+          <div class="profile-actions">
+              <button class="download-btn">Download CV</button>
+              <button class="edit-btn" id="edit-btn" data-file="profile.html">Edit Profile</button>
+          </div>
+      </div>
+
+      <div class="section">
+          <h3>Professional Summary</h3>
+          <p>
+              I am a passionate and detail-oriented software developer with 9 years of experience in designing, developing, and optimizing software solutions.
+          </p>
+      </div>
+
+      <div class="section skills">
+          <h3>Skills & Expertise</h3>
+          <div>
+            <p>Technical skills</p>
+             <div class="skill-tags">
+                 <span class="skill">Python</span>
+                 <span class="skill">Ruby</span>
+                 <span class="skill">JavaScript</span>
+             </div>
+             <p>Soft skills</p>
+             <div class="skill-tags soft-skills">
+                 <span class="skill">Problem-Solving</span>
+                 <span class="skill">Team Collaboration</span>
+                 <span class="skill">Algorithmic Thinking</span>
+             </div>
+          </div>
+      </div>
+
+      <div class="section">
+          <h3>Contacts & Social Links</h3>
+          <div class="contact">
+             <p class="bold">Email address <br> <span>JohnSmith234@gmail.com</span> </p>
+             <p class="bold">Mobile number <br> <span>+234 903 740 9563</span></p>
+          </div>
+          <hr>
+          <div class="social-icons">
+              <i class="fab fa-x"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-github"></i>
+          </div>
+      </div>
+      <hr>
+      <div class="section">
+          <h3>Location</h3>
+          <div class="contact">
+             <p>State <br><span>Anambra</span></p>
+             <p>City <br><span>Awka</span></p>
+             <p>Street Address <br><span>Plot No. A/127 Iyiagu Housing Estate</span></p>
+          </div>
+      </div>
+  </section>
+
+  <div id="editProfileModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalContent">
+            
+<div class="scene">
+    <div class="cube-wrapper">
+      <div class="cube">
+        <div class="cube-faces">
+          <div class="cube-face shadow"></div>
+          <div class="cube-face bottom"></div>
+          <div class="cube-face top"></div>
+          <div class="cube-face left"></div>
+          <div class="cube-face right"></div>
+          <div class="cube-face back"></div>
+          <div class="cube-face front"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+            </div>
+    </div>
+</div>
+  <script src="js/profile.js"></script>
+</body>
+</html>

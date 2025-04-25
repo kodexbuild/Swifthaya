@@ -1,0 +1,308 @@
+@import "./variable";
+@import "./mixin";
+
+* {
+  @include box;
+  // @include border;
+   
+}
+body {
+  width: 100%;
+  position: relative;
+}
+.header {
+  @include header;
+}
+//  pop upmodal
+
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+   
+// \404 modal
+.errormodal{
+  display: none;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  .hit-the-floor {
+    color: #fff;
+    font-size: 50vw;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow: 
+      0 .005em 0 #ccc, 
+      0 .01em 0 #c9c9c9, 
+      0 .015em 0 #bbb, 
+      0 .02em 0 #b9b9b9, 
+      0 .025em 0 #aaa, 
+      0 .03em .005em rgba(0,0,0,.1), 
+      0 0 .025em rgba(0,0,0,.1), 
+      0 .005em .015em rgba(0,0,0,.3), 
+      0 .015em .025em rgba(0,0,0,.2), 
+      0 .025em .05em rgba(0,0,0,.25), 
+      0 .05em .05em rgba(0,0,0,.2), 
+      0 .1em .1em rgba(0,0,0,.15);
+  }
+
+}
+
+
+
+.container {
+  height: 600px;
+  display: flex;
+  width: 100%;
+  // background-color: red;
+  padding-bottom: 10%;
+
+
+  .heroimg {
+    width: 43%;
+    height: 100%;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .form {
+  
+    padding: 20px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+
+    form {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .caption {
+        width: 100%;
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-weight: 600;
+          font-size: 1rem;
+          span {
+            color: lighten($green, 5);
+          }
+        }
+        * {
+          text-align: center;
+        }
+      }
+      .inputs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        row-gap: 20px;
+        label {
+          margin-left: 15px;
+        }
+
+        .input {
+          width: 100%;
+          overflow: hidden;
+          border: 1px solid grey;
+          box-shadow: 2px 2px 2px grey;
+          display: flex;
+          transition: all .7s ease-in-out;
+          align-items: center;
+          border-radius: 3px;
+          &:hover{
+            border-color:  $green;
+            color: $green;
+          }
+          input {
+            transition: all .3s ease-in-out;
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 15px;
+            font-weight: 400;
+            font-family: $main-font;
+            &:hover{
+              &::placeholder{
+              color: $green;
+              }
+            }
+            &:focus{
+              
+                text-indent: 10px;
+              
+            }
+            
+           
+          }
+          span{
+            padding-right: 10px;
+          }
+        }
+      }
+
+      .forgotpass {
+        width: 100%;
+        color: $green;
+        text-align: end;
+        text-decoration: none;
+      }
+      .loginbtn {
+        width: 100%;
+        padding: 15px;
+        margin: 10px auto;
+        font-weight: 600;
+        border-radius: 7px;
+        color: white;
+        text-align: center;
+        border: 1px solid transparent;
+        transition: all .3s ease-in-out;
+        background-color: darken($green, 4);
+        &:hover{
+          background: black;
+          color: $green;
+          border-color:$green ;
+        }
+      }
+      .login {
+        font-size: small;
+        font-weight: 600;
+        padding: 3px;
+        a {
+          margin-left: 2px;
+          text-decoration: none;
+          color: lighten($green, 5);
+        }
+      }
+      .alternative {
+        display: flex;
+        padding-block: 3px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        p {
+          text-align: center;
+          font-size: small;
+          width: 100%;
+          position: relative;
+          &::before {
+            content: "";
+            top: 50%;
+            width: 239px;
+            height: 1px;
+            position: absolute;
+            background-color: grey;
+            right: 0;
+          }
+          &::after {
+            content: "";
+            top: 50%;
+            left: 0;
+            width: 239px;
+            height: 1px;
+            position: absolute;
+            background-color: grey;
+          }
+          .yellow {
+            display: inline-block;
+            background-color: #f1d326;
+            color: black;
+            font-size: small;
+            font-weight: 600;
+            padding: 3px;
+            border-radius: 5px;
+          }
+        }
+      }
+      .socials {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+footer {
+  @include footer(100%, black);
+}
+
+// ipad view
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+// mobile view
+@media (max-width: 768px) {
+  .header {
+    @include header-mobile;
+    background-color: white;
+  }
+  .container {
+    margin-top: 43px;
+    .heroimg {
+      display: none;
+    }
+    .form {
+      padding: 10px;
+      padding-top: 50px;
+      width: 100%;
+      form {
+        background-color: white;
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+
+        .alternative {
+          p {
+            &::before,
+            &::after {
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @include footer-mobile;
+  }
+}

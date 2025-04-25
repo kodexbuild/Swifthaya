@@ -68,8 +68,7 @@
             text-transform: capitalize;
             font-weight: 600;
             width: 70%;
-            p {
-            }
+           
           }
         }
         .right {
@@ -179,7 +178,7 @@
       content: "";
       position: relative;
       display: inline-block;
-      float: right;
+      // float: right;
       bottom: 0px;
       right: 0px;
       width: 0px;

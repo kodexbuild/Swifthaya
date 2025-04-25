@@ -5,15 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title> 
     <link rel="stylesheet" href="Css/login.css">
+    <link rel="stylesheet" href="./users/">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
 />
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
 </head>
+
+
+    
+    
+  
 <body>
+      
+
+    
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+    <!-- errr0r 404 -->
+     <div class="errormodal" id="errormodal">
+        <div class="hit-the-floor">404</div>
+     </div>
+
+
+  
+   
     <header class="header"> 
         <div class="navbox">
+          
             <nav class="left">
                 <aside class="closer">
                     <i class="ri-close-large-line"></i>
@@ -59,8 +84,9 @@
     
     </header>
     <section class="container">
-        <div class="heroimg"    >
-        <img src="Assets/teacher.jpeg" alt=""></div>
+ <div class="heroimg">
+        <img src="Assets/teacher.jpeg" alt="">
+    </div>
         <div class="form">
             <form action="" id="loginForm">
             <div class="caption">
@@ -70,11 +96,12 @@
          <div class="inputs">
             <div class="input">
                 <label for=""><i class="ri-at-line"></i></label>
-                <input type="text" placeholder=" Email address" id="email" name="email">
+                <input type="text" required placeholder=" Email address" id="email" name="email">
             </div>
-            <div class="input">
+            <div class="input" >
                     <label for=""><i class="ph ph-lock"></i></label>
-                    <input type="password" placeholder="password" id="password" name="password">
+                    <input id="password" type="password"  required placeholder="password" id="password" name="password">
+                    <span id="eye"><i class="ph ph-eye"></i></span>
             </div>
         </div>
         <a href="" class="forgotpass"> forgot password</a>
@@ -144,8 +171,12 @@
         </div>
     </footer>
     
-<script src ="./Users/Talent/js/login.js">
+<script src ="./Js/login.js">
     
 </script>
 </body>
 </html>
+
+
+
+

@@ -36,7 +36,6 @@ header .opt-links .opt1 select, header .opt-links .opt2 select {
   border: none;
 }
 header .opt-links .search {
-  width: -moz-max-content;
   width: max-content;
   border: 1px solid grey;
   border-radius: 12px;
@@ -124,8 +123,7 @@ header .auth-links .post-job {
 .hero .hero-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 2rem 0 0 2rem;
 }
 @media screen and (max-width: 767px) {
@@ -199,10 +197,8 @@ header .auth-links .post-job {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
 }
 .cta main .txt {
   font-size: 1rem;
@@ -267,8 +263,7 @@ header .auth-links .post-job {
   border-radius: 1rem 1rem 0 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .featuredCont main aside .profileImg {
   margin-top: 2rem;
@@ -281,8 +276,7 @@ header .auth-links .post-job {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .featuredCont main aside p {
   margin-top: 1rem;
@@ -317,8 +311,7 @@ header .auth-links .post-job {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .testimony main aside .profile .nameDet {
   display: grid;
@@ -408,8 +401,7 @@ header .auth-links .post-job {
 .ourApp .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 footer {
@@ -481,4 +473,6 @@ footer .end {
 }
 footer .end p {
   font-size: 0.8rem;
-}/*# sourceMappingURL=landingPage.css.map */
+}
+
+/*# sourceMappingURL=landingPage.css.map */

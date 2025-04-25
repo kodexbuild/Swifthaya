@@ -1,0 +1,5 @@
+{"scripts": {
+   "watch-sass": "sass --watch globalScss:Css",
+  "watch-talentsass": "sass --watch Users/Talent/scss:Users/Talent/css"
+}
+}

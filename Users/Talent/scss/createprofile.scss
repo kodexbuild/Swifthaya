@@ -1,5 +1,10 @@
-// @import "_variable";
-// @import "./mediaquery";
+@import "../../../globalScss/variable";
+@import "../../../globalScss/mixin";
+* {
+  @include box;
+
+  //   @include border;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
@@ -28,11 +33,39 @@ section{
   display: flex;
   align-items: center;
   gap: 10px;
+  .inputwrapper.show{
+    display: block;
+    opacity: 1;
+   
+  }
+  .inputwrapper{
+    transition: opacity 2s ease, max-height 0.5s ease; /* Transition for 0.5 seconds */
+    display: none;
+   opacity: 0;
+    transition: .6s ease-in-out;
+    .file-upload{
+      color: green;
+    }
+    input[type="file"]{
+      opacity: .7;
+      font-family: poppins;
+      
+          }
+          .profilePictureInput{
+            display: none;
+          }
+  }
   .imgwrap{
     height:100px;
     width:100px;
     border-radius:50%;
     background:rgb(173, 172, 172);
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
   }
   .right {
     font-size: 1.2rem;
@@ -40,6 +73,13 @@ section{
     display: flex;
     align-items: center;
     gap: 5px;
+    .uploadbtn{
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
+      background: transparent;
+      color: gray;
+    }
   }
 }
 
@@ -51,6 +91,39 @@ section{
   width: 100%;
   font-weight:600;
   text-transform:capitalize;
+  label{
+    opacity:.8;
+    color:black;
+    font-size:1.2rem;
+  }
+  .text,input {
+    width: 100%;
+    margin-top:5px;
+    padding:4px;
+    border:1px solid grey;
+    outline: none;
+    p{
+      font-weight:300;
+    }
+  }
+}
+.contact_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 1rem;
+
+width: 90%;
+padding: 10px;
+
+
+
+}
+
+.contact{
+width: 100%;
+  font-weight:600;
+  text-transform:capitalize;
   h2{
     opacity:.8;
     color:black;
@@ -60,6 +133,9 @@ section{
     width: 100%;
     margin-top:5px;
     padding:4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border:1px solid grey;
     outline: none;
     p{
@@ -82,7 +158,7 @@ section{
   font-size:2rem;
   
 }
-.social p{
+.social input{
   text-transform:capitalize;
  width:90%;
   font-weight:600;
@@ -110,7 +186,7 @@ section{
   justify-content:center;
   align-items:center;
 }
-.bottom .icon > *{
+.bottom .container .text .file-label > *{
   font-size:4rem;
   opacity:.7;
 }
@@ -118,11 +194,26 @@ section{
   font-weight:600;
 }
 .bottom .container .text p span{
-  opacity:.3;
+  opacity:.5;
 }
 .bottom .container  .text :nth-child(2){
-   opacity:.3;
+   opacity:.5;
 }
+input#resumeUpload{
+  display: none;
+}
+.resumebtn{
+  border: none;
+  font-size: 1.2rem;
+  outline:none;
+text-align: left;
+padding-left: 10px;
+  width: 100%;
+}
+.resumebtn p:first-of-type{
+  opacity: .6;
+}
+
 .btn{
   display:flex;
   justify-content:right;
@@ -140,4 +231,9 @@ section{
 .btn :nth-child(2){
   background:black;
   color:white;
+  transition: .3s ease-in-out;
+  &:hover{
+    background:$green;
+    border: transparent;
+  }
 }

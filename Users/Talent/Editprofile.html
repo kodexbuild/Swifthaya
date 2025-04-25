@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createprofile</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="./css/createprofile.css">
+</head>
+<body>
+    <section class="section">
+        <header>
+            <h1>edit profile</h1>
+        </header>
+        <section>
+            <div class="picture">
+                <!-- <span id="more"> <i class="ri-more-2-line"></i></span> -->
+                <div class="inputwrapper">
+                    <label for="profilePictureInput" class="file-upload">
+                        Choose file
+                    </label>
+                    <input type="file" id="profilePictureInput" class="profilePictureInput" accept="image/*">
+                </div>
+                
+                   <div class="imgwrap">
+                    <img  id="ProfilePicturePreview" alt="Profile Picture Preview"></img>
+                   </div>
+                
+                <div class="right" id="more">
+                    <i class="ri-upload-2-line" ></i>
+                    
+                    <button id="uploadButton" class="uploadbtn">Upload profile picture</button>
+                </div>
+            </div>
+            <form action="" id="editProfileForm">
+                <div class="info_box">
+                    <div class="info">
+                        <label for="firstname">first name</label>
+                        <input type="text" id="firstname"  name="first_name" class="text">
+                    </div>
+                    <div class="info">
+                        <label for="lastname">last name</label>
+                        <input type="text" id="lastname" name="last_name" class="text">
+                    </div>
+            
+                    <div class="info">
+                        <label for="job">job title</label>
+                        <input type="text" id="job" name="job_title" class="text">
+                    </div>
+            
+                    <div class="info">
+                        <label>proffessional summary</label>
+                        <textarea name="professional_bio" id="proffessionalsum"  class="text"></textarea>
+                    </div>
+                    <div class="info">
+                        <label for="techskills">technical skills</label>
+                        <textarea name="tech_skills" id="techskills" class="text"></textarea>
+                    </div>
+                    <div class="info">
+                        <label for="softskills">soft skills</label>
+                        <textarea name="soft_skills" id="softskills" class="text"></textarea>
+                    </div>
+                </div>
+                <div class="socials">
+                    <div class="top">
+                        <h2>social links</h2>
+                    </div>
+                    <div class="bottom">
+                        <div class="social">
+                            <label><i class="ri-linkedin-box-fill"></i></label>
+                            <input type="url" placeholder="linkedin Url" id="linkedin" name="linkedin_url">
+                            
+                        </div>
+                        <div class="social">
+            
+                            <label for="github"><i class="ri-github-fill"></i></label>
+                            <input type="url" placeholder="Github url" id="github" name="github_url">
+                        </div>
+                        <div class="social">
+                            <label><i class="ri-twitter-fill"></i></label>
+                            <input type="url" placeholder="Twitter url" id="twitter" name="twitter_url">
+                        </div>
+                        <div class="social">
+                            <label><i class="ri-global-fill"></i></label>
+                            <input type="url" id="web_url" placeholder="web_url" name="portfolio_url">
+                        </div>
+            
+                    </div>
+        
+                    <div class="contact_box">
+                        <div class="contact">
+                            <label for="">email address</label>
+                            <input type="email" id="email" class="text" name="email" placeholder="samuelebube@gmail.com">
+                        </div>
+                        <div class="contact">
+                            <label for="telph">mobile number</label>
+                            <input type="tel"  class="text" id="telph" name="phone_number" placeholder="+234....">
+                        </div>
+                        <div class="contact">
+                            <label for="">state</label>
+                            <input type="text" id="state" class="text" placeholder="Anambra">
+                        </div>
+                        <div class="contact">
+                            <label for="">city</label>
+                            <input type="text" id="city" class="text" placeholder="Awka">
+                        </div>
+                    </div>
+                    <div class="resume">
+                        <div class="top">
+                            <h2>resume upload</h2>
+                        </div>
+                        <div class="bottom">
+                            <div class="container">
+                               
+                                <label class="text">
+                                    <a class="file-label"> <i class="ri-file-upload-fill"></i></a >
+                                    <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx">
+                                     <button id="resumebtn" class="resumebtn">
+                                        <p>Upload a file <span>or drag and drop</span></p>
+                                    <p>PDF,DOC or DOCX up to 10mb</p>
+                                        </button>
+                                    
+                                </label>
+            
+                            </div>
+            
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button>cancel</button>
+                        <button type="submit">save changes</button>
+                    </div>
+                </div>
+
+            </form>
+        
+        
+    </section>
+</section>
+<script src="./js/editprofile.js"></script>
+</body>
+</html>
